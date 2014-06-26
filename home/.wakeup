@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#
+# This script is run sleepwatcher by when the computer is waking up
+#
+
+/usr/sbin/diskutil list |  awk '/Apple_HFS Backup/ {print $NF}' |  xargs -I{} /usr/sbin/diskutil mount {}
+# say "Waking up"
+
+

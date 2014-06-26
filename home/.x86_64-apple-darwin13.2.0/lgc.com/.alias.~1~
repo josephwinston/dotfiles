@@ -1,0 +1,13 @@
+# /bin/csh -f
+
+#
+# $Id: .alias,v 1.1 2004/08/09 23:13:08 CVS_jody Exp $
+#
+
+# Use the C Shell
+
+alias running "ps -ax | grep \!* |& grep -v 'grep \!*' "
+alias zap '(set j=`ps -ax|grep \!*|head -1`;kill -9 $j[1]) >& /dev/null'
+
+# alias ls "ls -C --color=auto"
+

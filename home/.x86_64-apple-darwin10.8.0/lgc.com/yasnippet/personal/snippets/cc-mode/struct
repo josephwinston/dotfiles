@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: struct ... { ... }
+# key: struct
+# --
+struct ${1:Name}
+{
+    $0
+};   // struct ${1:$(yas-substr text "[^: ]*")}

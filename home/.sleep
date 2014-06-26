@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#
+# This script is run sleepwatcher by when the computer is going to
+# sleep.
+#
+
+/usr/sbin/diskutil eject /Volumes/Backup > /dev/null 2>&1
+# say "Goodnight"
+
+
+
+
+
+

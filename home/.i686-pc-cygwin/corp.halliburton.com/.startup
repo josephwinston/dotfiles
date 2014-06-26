@@ -1,0 +1,15 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.i686-unknown-linux/xprtcc.com/.startup#2 $
+#
+
+#
+# Use the C Shell
+#
+
+if (($SHELL != "bash") && (-e $BASH_HOME)) then
+    # use the full path in case the path hasn't been set
+     exec $BASH_HOME
+  endif
+endif

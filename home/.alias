@@ -1,0 +1,62 @@
+# /bin/csh -f
+
+#
+# $Id: .alias,v 1.1 2000/09/05 00:13:27 CVS_jody Exp $
+#
+
+# Use the C Shell
+
+# the following will set the prompt for the user to be the last element
+# of the current directory path.
+
+unalias *
+
+if ($?CLEARCASE_ROOT) then
+   alias setprompt 'set prompt="[`basename $CLEARCASE_ROOT`] `echo $HOSTNAME`:`echo $cwd|sed s@$HOME@~@` "'
+else
+   alias setprompt 'set prompt="`echo $HOSTNAME`:`echo $cwd|sed s@$HOME@~@` "'
+endif
+
+#
+# For xterm 2 = xterm title only
+# 	    0 = xterm title and icon title
+#	    1 = xterm icon only
+#         
+
+# alias setprompt 'echo -n "]0;$cwd";set prompt="`echo $HOSTNAME`:`echo $cwd|sed s@$HOME@~@` "'
+
+alias cd 'if ("\!:0-$" == cd) cd;\\
+if ("\!:0-$" != cd) cd \!$;\\
+setprompt'
+
+alias pushd 'if ("\!:0-$" == pushd) pushd;\\
+if ("\!:0-$" != pushd) pushd \!$;\\
+setprompt'
+
+alias popd 'if ("\!:0-$" == popd) popd;\\
+if ("\!:0-$" != popd) popd \!$;\\
+setprompt'
+
+alias copy cp
+alias dir ls -a
+alias del rm -i
+alias list cat
+alias bc bc -l
+
+alias allmounts 'ypcat auto.home | cut -f4 -d" " | sort'
+alias zmore "zcat \!*|more"
+
+#alias vgrind vgrind -d /usr/local/lib/tex/vgrindefs
+
+#
+# load the correct domain information
+#
+
+if ( -e ~/.$FULLNAME/$DOMAIN/.alias ) then
+  source ~/.$FULLNAME/$DOMAIN/.alias
+  # echo done source ~/.$FULLNAME/$DOMAIN/.alias
+endif
+
+
+
+

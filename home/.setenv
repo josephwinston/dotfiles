@@ -1,0 +1,109 @@
+# /bin/csh -f
+
+#
+# $Id: .setenv,v 1.1 2000/10/13 13:57:18 CVS_jody Exp $
+#
+
+# Use the C Shell
+
+#
+# These are also in .cshrc
+# They are here to make .setenv a stand alone program
+#
+
+#
+# Get the domain name
+#
+
+setenv DOMAIN "lgc.com"
+# if { ~/Tools/bin/which -f domainname > /dev/null } then
+#   setenv DOMAIN `domainname`
+# else
+#   setenv DOMAIN unknown
+# endif
+
+setenv HOSTNAME `uname -n|cut -f1 -d"."`
+
+#
+# Put the full path here
+#
+
+setenv FULLNAME `~/Tools/bin/config.guess`
+setenv UNAME_MACHINE `uname -m`
+setenv UNAME_RELEASE `uname -r`
+setenv UNAME_SYSTEM `uname -s`
+setenv UNAME_VERSION `uname -v`
+
+#
+# Hack for OS X
+#
+
+if ( $FULLNAME == "x86_64-apple-darwin10.8.0" ) then
+   setenv DOMAIN lgc.com
+endif
+
+#
+#	What shell for emacs
+#
+
+setenv ESHELL csh
+
+#
+# For gnu utilies backup versions
+#
+
+setenv VERSION_CONTROL numbered
+
+#
+# What editor
+#
+
+setenv EDITOR gnuclient
+
+#
+# For gnus
+#
+
+setenv AUTHORCOPY ~/News/outgoing
+
+#
+# used to speed up .setenv and .cshrc
+#
+
+setenv MACH `echo $FULLNAME |cut -f1 -d"-"`
+
+#
+# Only set if not done
+#
+
+if ($?DISPLAY == 0) then
+#  setenv DISPLAY `echo "$HOSTNAME":0.0`
+  setenv DISPLAY :0.0
+endif
+
+#
+# For enscript
+#
+
+setenv ENSCRIPT -fCourier8
+
+#
+# load the correct domain information for the display
+#
+
+if (( -e ~/.$FULLNAME/$DOMAIN/.termcap ) && ($?TERM != 0)) then
+  source ~/.$FULLNAME/$DOMAIN/.termcap
+  # echo done source ~/.$FULLNAME/$DOMAIN/.termcap
+endif
+
+#
+# load the correct domain information
+#
+
+if ( -e ~/.$FULLNAME/$DOMAIN/.setenv ) then
+  source ~/.$FULLNAME/$DOMAIN/.setenv
+#  echo done source ~/.$FULLNAME/$DOMAIN/.setenv
+else
+  echo ~/.$FULLNAME/$DOMAIN/.setenv not found
+endif
+

@@ -1,0 +1,203 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.i686-unknown-linux/xprtcc.com/.setenv#4 $
+#
+
+
+#
+# What time zone
+#
+
+setenv TZ CST6CDT
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+# setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# more not less
+#
+
+setenv PAGER more
+
+#
+# What printer to use
+#
+
+if ( -e /etc/manpath.config ) then
+    # ubuntu
+else
+#    setenv PRINTER LaserJet2100M
+    setenv PRINTER LaserJet2550N
+endif
+
+
+#
+# X11 is here
+#
+
+setenv X11HOME /usr/X11R6
+
+#
+# Turn on access to
+#
+
+# setenv OKHOSTS "apollo zeus godzilla boondock"
+
+#
+# Where the man pages are found
+#
+
+if ( -e  /etc/manpath.config ) then
+    # Ubuntu
+else
+    set manpath = ($X11HOME/man)
+    set manpath = ($manpath /usr/local/man /usr/man)
+    set manpath = ($manpath /opt/atalk/man)
+    set manpath = ($manpath /opt/HDF/man)s
+    set manpath = ($manpath /opt/des/man)
+    set manpath = ($manpath /opt/gv1.5/man)
+    set manpath = ($manpath /opt/ilu/man)
+    set manpath = ($manpath /opt/squeak/man)
+    set manpath = ($manpath /opt/xemacs/man)
+    
+    setenv MANPATH `echo $manpath|sed s@" "@":"@g`
+    
+endif
+
+
+# Where the application defaults are
+# This will work for R2-R5
+# When searching for the resource files, the bindings to XtFindFile are
+# ALWAYS:
+#  %T -> "app-defaults"
+#  %N -> <application class name>
+#  %S -> ""
+#
+# blank is /usr/lib/X11/app-defaults
+#
+
+setenv XAPPLRESDIR ~/.app-defaults
+
+setenv XFILESEARCHPATH ~/.%T/%N%S:$X11HOME/lib/X11/%T/%N%S:$X11HOME/lib/X11/%T/%N%C
+setenv FONTSERVER `echo "$HOSTNAME":7000`
+
+setenv XKEYSYMDB $X11HOME/lib/X11/XKeysymDB
+
+#
+# Problems with Redhat 6.1
+#
+
+unsetenv X11HOME
+unsetenv XAPPLRESDIR
+unsetenv XFILESEARCHPATH
+unsetenv XKEYSYMDB
+
+#
+# set up TeX
+#
+
+#setenv TEXFONTS ".:/usr/local/lib/tex/fonts"
+#setenv TEXFORMATS ".:/usr/local/lib/tex/formats"
+#setenv TEXINPUTS ".:/usr/local/lib/tex/inputs"
+#setenv TEXPOOL "/usr/local/lib/tex"
+#setenv MFBASES ".:/usr/local/lib/mf/bases"
+#setenv MFINPUTS ".:/usr/local/lib/mf/inputs"
+#setenv MFPOOL "/usr/local/lib/mf"
+
+#
+# Set up CVS
+#
+
+setenv CVSROOT :pserver:CVS_jody@localhost:/home/CACHE/CVS_jody/CACHE/CVSROOT
+
+#
+# Set up lclint
+#
+
+#setenv LCLIMPORTDIR /usr/local/lib/lclint/imports
+#setenv LARCH_PATH .:/usr/local/lib/lclint
+
+#
+# What editor
+#
+
+setenv EDITOR emacsclient
+
+#
+# Absoft FORTRAN
+#
+
+setenv ABSOFT /usr/absoft
+
+#
+# Set up BASH
+#
+
+setenv BASH_HOME /bin/bash
+
+#
+# xemacs on ubuntu 5.1
+#
+
+if ( -e /etc/manpath.config ) then
+#    setenv LANG en_US.iso88591
+endif
+
+#
+# PYTHON
+#
+
+setenv PYTHONSTARTUP ~/.pythonrc.py
+
+#
+# Perforce
+#
+
+setenv P4PORT localhost:2201
+setenv P4USER jwinston
+setenv P4CLIENT `echo ${P4USER}-${HOSTNAME}-${FULLNAME}`
+setenv P4EDITOR gnuclient
+
+
+#
+# OpenAvionics
+#
+
+#setenv OPEN_AVIONICS $HOME/src/OpenAvionics
+#setenv PATH ${PATH}:${OPEN_AVIONICS}/${FULLNAME}/bin
+#setenv OSG_FILE_PATH ${OPEN_AVIONICS}/Dependencies/OpenSceneGraph-Data
+#setenv OSG_FILE_PATH ${OSG_FILE_PATH}:${OPEN_AVIONICS}Dependencies/OpenSceneGraph-Data/Images
+#setenv OSG_ROOT ${OPEN_AVIONICS}/${FULLNAME}
+#setenv OSGHOME ${OPEN_AVIONICS}/Dependencies/OpenSceneGraph
+#setenv BUILD_DEBUG
+
+
+#
+# GCC 4.x now uses unicode fonts for error output.  Great, except
+# the pretty fonts in konsole do not know about unicode.
+#
+
+setenv LC_CTYPE C 
+setenv LC_ALL C
+
+#
+# keychain
+#
+
+# if ( -e /usr/bin/keychain) then
+#     keychain --quiet id_dsa
+#     if (-f $HOME/.keychain/$HOST-csh) then
+# 	source $HOME/.keychain/$HOST-csh
+#     endif
+#     if (-f $HOME/.keychain/$HOST-csh-gpg) then
+# 	source $HOME/.keychain/$HOST-csh-gpg
+#     endif
+# endif
+
+
