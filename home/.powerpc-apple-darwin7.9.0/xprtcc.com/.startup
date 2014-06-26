@@ -1,0 +1,15 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.powerpc-apple-darwin7.9.0/xprtcc.com/.startup#1 $
+#
+
+#
+# Use the C Shell
+#
+
+if (($SHELL != "bash") && (-e $BASH_HOME)) then
+    # use the full path in case the path hasn't been set
+     exec $BASH_HOME
+  endif
+endif

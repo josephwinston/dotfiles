@@ -1,0 +1,31 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.sparc-sun-solaris2.6/LDGO/.alias#1 $
+#
+
+# Use the C Shell
+
+alias zap '(set j=`ps -el|grep \!*|head -1`;kill -9 $j[4]) >& /dev/null'
+alias running "ps -el | grep \!* |& grep -v 'grep \!*' "
+alias clear "tput clear"
+
+#
+# to do: Make a script
+#
+
+alias owmaker 'setenv FMHOME /data/lamont/frame3.1.1OL; set path=($path $FMHOME/bin); setenv CEPATH "$FMHOME/.fminit2.0/newslib:$FMHOME/.cetables:/etc/cetables:$OPENWINHOME/lib/cetables" ; rehash ; $FMHOME/bin/maker;'
+
+#
+# to do: Make a script
+#
+
+alias maker4 'setenv FMHOME /data/lamont/frame4.0; set path=($path $FMHOME/bin); $FMHOME/bin/maker; rehash'
+
+#
+# to do: Make a script
+#
+
+alias avs 'set path=($path $AVSHOME/bin); rehash; $AVSHOME/bin/avs -path $AVSHOME'
+
+# alias ls "ls -C --color=auto"

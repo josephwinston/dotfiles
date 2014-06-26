@@ -1,0 +1,16 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.i686-unknown-linux/xprtcc.com/.alias#3 $
+#
+
+# Use the C Shell
+
+alias running "ps ax | grep \!* |& grep -v 'grep \!*' "
+alias zap '(set j=`ps ax|grep \!*|head -1`;kill -9 $j[1]) >& /dev/null'
+
+alias ls "ls -C --color=auto"
+
+alias versions "rpm -q -a --queryformat '%{NAME} %{VERSION}\n'"
+
+# alias from "frm"

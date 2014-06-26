@@ -1,0 +1,12 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.powerpc-ibm-aix4.2.0.0/hls_ts/.alias#1 $
+#
+
+# Use the C Shell
+
+alias zap '(set j=`ps -el|grep \!*|head -1`;kill -9 $j[4]) >& /dev/null'
+alias running "ps -el | grep \!* |& grep -v 'grep \!*' "
+alias clear "tput clear"
+

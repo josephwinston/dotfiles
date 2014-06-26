@@ -1,0 +1,172 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.sparc-sun-solaris2.6/LDGO/.setenv#1 $
+#
+
+#
+# What time zone
+#
+
+setenv TZ EST5EDT
+
+#
+# What editor
+#
+
+setenv EDITOR gnuclient
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+#setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# What printer to use
+#
+
+setenv PRINTER skunk
+
+#
+# X11 is here
+#
+
+setenv X11HOME /usr
+
+#
+# Openwin
+#
+
+
+#
+# Where the man pages are found
+#
+
+setenv MANPATH /usr/local/SUNWspro/man
+setenv MANPATH ${MANPATH}:/usr/lang/man
+setenv MANPATH ${MANPATH}:/usr/man
+setenv MANPATH ${MANPATH}:/usr/local
+setenv MANPATH ${MANPATH}:`echo ~/Tools/man`
+
+# Where the application defaults are
+# This will work for R2-R5
+# When searching for the resource files, the bindings to XtFindFile are
+# ALWAYS:
+#  %T -> "app-defaults"
+#  %N -> <application class name>
+#  %S -> ""
+#
+# blank is /usr/lib/X11/app-defaults
+#
+
+setenv XAPPLRESDIR ~/.app-defaults
+
+setenv XFILESEARCHPATH `echo ~/.%T/%N%S`
+setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%S
+setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%C
+
+setenv XUSERFILESEARCHPATH `echo ~/.desktop-$HOSTNAME/%N`
+
+#
+# Where to place temp files
+#
+
+setenv TMPDIR /tmp
+
+#
+# Language
+#
+
+# setenv LANG C
+
+#
+# Set up library path for DLL
+#
+
+setenv LD_LIBRARY_PATH .
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/usr/openwin/lib
+
+
+#
+# CVSROOT
+#
+
+#setenv CVSROOT ~/CACHE/CVSROOT
+setenv CVSROOT :pserver:jody@hog.ldeo.columbia.edu:/src/hog/seisres/CACHE/CVSROOT
+
+#
+# For JAVA
+#
+
+setenv CLASSPATH .
+
+#
+# Set up ILU
+#
+
+setenv ILU_HOME /usr/aag
+setenv ILUPATH $ILU_HOME/interfaces
+setenv ILUPATH ${ILUPATH}:.
+
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$ILU_HOME/$FULLNAME/lib
+setenv CLASSPATH ${CLASSPATH}:$ILU_HOME/lib/javaclasses
+
+#
+# For ls
+#
+
+setenv LS_COLORS "no=0:fi=0:di=32:ln=36:pi=31:so=33:bd=44;37:cd=45;37:ex=35"
+
+#
+# Don't use gcc by default
+#
+
+setenv CC cc
+setenv CXX CC
+
+#
+# PGP
+#
+
+setenv PGPPATH ~/src/Tools/Security/pgp
+
+#
+# PGPLOT
+#
+
+setenv PGPLOT_DIR /usr/aag/pgplot/
+
+#
+# News
+#
+
+setenv NNTPSERVER lamont
+setenv NEWSDIR /news
+setenv NEWSPROGDIR /usr/lib/news
+setenv INEWSPROG /usr/local/bin/_inews
+
+#
+# Flex LM
+#
+
+setenv LM_LICENSE_FILE /home/geo/usr/etc/license.dat:/users/ouzel/ermapper/config/license.dat:/src/hog/avs/SunOS5/license/license.dat:/src/hog/OpenWorks/lam/license.dat
+
+#setenv LM_LICENSE_FILE /lamont/lamont/usr/etc/license.dat
+#setenv LM_LICENSE_FILE ${LM_LICENSE_FILE}:/users/ouzel/ermapper/config/license.dat
+#setenv LM_LICENSE_FILE ${LM_LICENSE_FILE}:/src/hog/avs/SunOS5/license/license.dat
+#setenv LM_LICENSE_FILE ${LM_LICENSE_FILE}:/src/hog/OpenWorks/lam/license.dat
+
+#
+# AVS (Advanced Visual Systems)
+#
+
+setenv AVSHOME /src/hog/avs/SunOS4
+
+#
+# Set up BASH
+#
+
+setenv BASH_HOME /users/hog/jody/Tools/sparc-sun-solaris2.5.1/bin/bash

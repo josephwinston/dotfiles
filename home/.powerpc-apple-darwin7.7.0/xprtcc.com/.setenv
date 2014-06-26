@@ -1,0 +1,84 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.powerpc-apple-darwin7.7.0/xprtcc.com/.setenv#1 $
+#
+
+#
+# What time zone
+#
+
+setenv TZ CST6CDT
+
+#
+# What man pages
+#
+
+setenv MANPATH `manpath -q`
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+# setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# more not less
+#
+
+setenv PAGER more
+
+#
+# Set up CVS
+#
+
+setenv CVSROOT :pserver:CVS_jody@blossom.mine.nu:/home/CACHE/CVS_jody/CACHE/CVSROOT
+
+#
+# I like the old colors better
+#
+
+setenv LS_COLORS "no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:*.sh=01;32:*.csh=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31:*.rpm=01;31:*.cpio=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.xbm=01;35:*.xpm=01;35:*.png=01;35:*.tif=01;35:"
+
+#
+# See http://developer.apple.com/techpubs/macosx/ReleaseNotes/AvailabilityMacros.html
+#
+
+# setenv MACOSX_DEPLOYMENT_TARGET "10.2" # Was 10.2
+
+#
+# RSYNC
+#
+
+setenv RSYNC_RSH ssh
+
+#
+# Qt
+#
+
+setenv QTDIR /usr/local
+
+if ($?DYLD_LIBRARY_PATH == 0) then
+  setenv DYLD_LIBRARY_PATH ""
+endif
+
+setenv DYLD_LIBRARY_PATH ${QTDIR}/lib:${DYLD_LIBRARY_PATH}
+setenv DYLD_LIBRARY_PATH /usr/OpenMotif/lib:${DYLD_LIBRARY_PATH}
+
+#
+# Perforce
+#
+
+setenv P4PORT localhost:2201
+setenv P4USER jwinston
+setenv P4CLIENT `echo ${P4USER}-powerbook-ssh-${FULLNAME}`
+setenv P4EDITOR emacs
+
+#
+# Bash 
+#
+
+setenv BASH_HOME /bin/bash
+

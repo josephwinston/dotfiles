@@ -1,0 +1,223 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.powerpc-ibm-aix4.2.0.0/hls_ts/.setenv#1 $
+#
+
+#
+# What time zone
+#
+
+setenv TZ CST6CDT
+
+#
+# What editor
+#
+
+setenv EDITOR gnuclient
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+#setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# What printer to use
+#
+
+setenv PRINTER hpps
+
+#
+# X11 is here
+#
+
+setenv X11HOME /usr
+
+#
+# For the new man on ftp.sgi.com:~ftp/sgi/man
+#
+
+setenv MANFMTCMD "groff -man -Tascii"
+#setenv MANFMTCMD "awf -man"
+
+#
+# For purify
+#
+setenv PURIFYHOME /usr/pure/purify
+setenv PURIFYOPTIONS "-always-use-cache-dir=yes -cache-dir=/aa/jody/CACHE/PURIFY -chain-length=128 -windows=no -ignore-signals=RESERVED48"
+
+#
+# Where the man pages are found
+#
+
+setenv MANPATH /usr/share/catman
+setenv MANPATH ${MANPATH}:/usr/share/man
+setenv MANPATH ${MANPATH}:/usr/catman
+setenv MANPATH ${MANPATH}:/usr/man
+setenv MANPATH ${MANPATH}:`echo ~/Tools/man`
+setenv MANPATH ${MANPATH}:`echo ~/Tools/mips-sgi-irix6.2/ilu/man`
+
+# Where the application defaults are
+# This will work for R2-R5
+# When searching for the resource files, the bindings to XtFindFile are
+# ALWAYS:
+#  %T -> "app-defaults"
+#  %N -> <application class name>
+#  %S -> ""
+#
+# blank is /usr/lib/X11/app-defaults
+#
+
+setenv XAPPLRESDIR ~/.app-defaults
+
+setenv XFILESEARCHPATH `echo ~/.%T/%N%S`
+setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%S
+setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%C
+
+setenv XUSERFILESEARCHPATH `echo ~/.desktop-$HOSTNAME/%N`
+
+#
+# Where to place temp files
+#
+
+setenv TMPDIR /tmp
+
+#
+# Language
+#
+
+# setenv LANG C
+
+#
+# Inventor Debug
+#
+
+# setenv IV_DEBUG_SENSORS "YES"
+# setenv IV_DEBUG_BUFLEN "YES"
+# setenv IV_DEBUG_CACHES "YES"
+# setenv IV_DEBUG_CACHELIST "YES"
+# setenv IV_DEBUG_TRANSFORM_MANIP_FIELDS "YES"
+# setenv IV_DEBUG_WRITE_KIT_CHILDREN "YES"
+setenv IV_DEBUG_KIT_PARTS "YES"
+
+#
+# Which version of inventor
+#
+
+setenv INVENTOR InventorDebug
+#setenv INVENTOR Inventor     # For 2.0
+#setenv INVENTOR InventorDSO  # For 2.1
+
+#
+# Set up library path for DSOs
+#
+
+setenv LD_LIBRARY_PATH `echo ~/Tools/lib/mips-sgi-irix6.2/python1.4/sharedmodules/Numeric `
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:`echo ~/Tools/mips-sgi-irix6.2/lib`
+#setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/usr/lib/${INVENTOR}
+
+#unsetenv _RLD_ROOT
+
+#
+# For dbx
+#
+
+setenv LINEEDIT ""
+
+#
+# Set up python (use this since the home directory is /home and the
+# automount directory is /aa)
+#
+
+setenv PYTHONPATH `echo ~/Tools/lib/python1.4`
+setenv PYTHONPATH ${PYTHONPATH}:`echo ~/Tools/ilu/$FULLNAME/lib`
+setenv PYTHONPATH ${PYTHONPATH}:`echo ~/Tools/lib/python1.4/test`
+setenv PYTHONPATH ${PYTHONPATH}:`echo ~/Tools/lib/python1.4/irix6`
+setenv PYTHONPATH ${PYTHONPATH}:`echo ~/Tools/lib/$FULLNAME/python1.4/sharedmodules`
+setenv PYTHONPATH ${PYTHONPATH}:`echo ~/Tools/lib/python1.4/tkinter`
+# setenv pythonpath ${PYTHONPATH}:`echo ~/Tools/lib/python1.4/Numeric`
+setenv PYTHONPATH ${PYTHONPATH}:`echo ~/Tools/lib/python1.4/PyOpenGL`
+setenv PYTHONPATH ${PYTHONPATH}:`echo ~/Tools/lib/python1.4/Imaging`
+setenv PYTHONPATH ${PYTHONPATH}:`echo ~/Tools/lib/python1.4/X11`
+setenv PYTHONPATH ${PYTHONPATH}:.
+
+#
+# Set up TCL and TK (use this since the home directory is /home and
+# the automount directory is /aa)
+#
+
+setenv TCL_LIBRARY ~/Tools/lib/tcl7.5
+setenv TK_LIBRARY ~/Tools/lib/tk4.1
+
+#
+# Set up ILU
+#
+
+setenv ILUPATH `echo ~/Tools/ilu/interfaces`
+setenv ILUPATH ${ILUPATH}:.
+
+#
+# Source code environment
+#
+
+setenv SCCSDIR /hls_sccs
+setenv REFDIR /hls_reference
+setenv LOCATION houdev
+setenv MACHINE IBM
+
+#
+# CVSROOT
+#
+
+setenv CVSROOT jody@tssgi07:/disk2/CACHE/CVSROOT
+
+#
+# MALLOC debugging with -lmalloc_cv
+#
+
+#setenv MALLOC_CLEAR_FREE
+#setenv MALLOC_CLEAR_MALLOC
+#setenv MALLOC_VERBOSE 1
+#setenv MALLOC_FULLWARN
+#setenv MALLOC_FASTCHK
+
+#
+# LCLINT
+#
+
+# setenv LARCH_PATH ".:/aa/jody/Tools/lib"
+# setenv LCLINT_CPPCMD "/lib/cpp"
+# setenv LCLIMPORTDIR "/aa/jody/Tools/imports"
+
+#
+# Which ABI
+#
+
+# setenv SGI_ABI "-n32"
+
+#
+# For w3
+#
+
+setenv ftp_proxy internet:81
+setenv gopher_proxy internet:81
+setenv http_proxy internet:81
+setenv security_proxy internet:81
+setenv ftp_wais internet:81
+
+#
+# For JAVA
+#
+
+setenv CLASSPATH `echo ~/src/Languages/Java/IFC/ifc10/classes`
+setenv CLASSPATH ${CLASSPATH}:.
+
+#
+# Set up BASH
+#
+
+setenv BASH_HOME ~/Tools/rs6000-ibm-aix4.2.0.0/bin/bash
+

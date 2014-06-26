@@ -1,0 +1,129 @@
+# /bin/csh -f
+
+#
+# $Id: .setenv,v 1.1 2000/09/05 00:24:12 CVS_jody Exp $
+#
+
+#
+# What time zone
+#
+
+#setenv TZ EST5EDT
+setenv TZ CST6CDT
+
+#
+# Pager
+#
+
+setenv PAGER more
+
+#
+# What editor
+#
+
+setenv EDITOR gnuclient
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+#setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# What printer to use
+#
+
+setenv PRINTER optra
+
+#
+# X11 is here
+#
+
+setenv X11HOME /usr/X11R6
+
+# Where the application defaults are
+# This will work for R2-R5
+# When searching for the resource files, the bindings to XtFindFile are
+# ALWAYS:
+#  %T -> "app-defaults"
+#  %N -> <application class name>
+#  %S -> ""
+#
+# blank is /usr/lib/X11/app-defaults
+#
+
+setenv XAPPLRESDIR ~/.app-defaults
+
+setenv XFILESEARCHPATH `echo ~/.%T/%N%S`
+setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%S
+setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%C
+
+setenv XUSERFILESEARCHPATH `echo ~/.desktop-$HOSTNAME/%N`
+
+#
+# Where to place temp files
+#
+
+setenv TMPDIR /usr/tmp
+
+#
+# Language
+#
+
+# setenv LANG C
+
+setenv LD_LIBRARY_PATH .
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/usr/local/lib
+
+#
+# ACE
+#
+
+setenv ACE_ROOT ~/src/CUSTOMERS/LDEO/LAMONT/seisres/ext/ACE_wrappers
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${ACE_ROOT}/ace
+
+#
+# CVSROOT
+#
+
+setenv CVSROOT ~/CACHE/CVSROOT
+#setenv CVSROOT :pserver:jody@hog.ldeo.columbia.edu:/src/hog/seisres/CACHE/CVSROOT
+#setenv CVSROOT :pserver:jody@medusa.xprt.com:/usr/people/seisres/CACHE/CVSROOT
+
+#
+# For JAVA
+#
+
+setenv CLASSPATH .
+
+#setenv THREADS_FLAG green
+setenv THREADS_FLAG native
+
+#
+# Set up ILU
+#
+
+setenv ILU_HOME /usr/local/ilu
+setenv ILUPATH $ILU_HOME/interfaces
+setenv ILUPATH ${ILUPATH}:.
+
+#
+# ILU's autoimport does NOT work with packages
+#
+
+setenv ILU_PYTHON_DISABLE_AUTOIMPORT 
+
+#setenv CLASSPATH ${CLASSPATH}:$ILU_HOME/lib/javaclasses
+setenv CLASSPATH ${CLASSPATH}:$ILU_HOME/lib/ilu.jar
+
+#
+# For ls
+#
+
+setenv LS_COLORS "no=0:fi=0:di=32:ln=36:pi=31:so=33:bd=44;37:cd=45;37:ex=35"
+
+setenv BASH_HOME /bin/bash
+
+

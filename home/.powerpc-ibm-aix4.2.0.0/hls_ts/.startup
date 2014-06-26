@@ -1,0 +1,20 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.powerpc-ibm-aix4.2.0.0/hls_ts/.startup#1 $
+#
+
+#
+# Use the C Shell
+#
+
+#
+# SHELL must be set to the full pathname for dbx to work
+#
+
+if (($SHELL != $BASH_HOME) && (-e $BASH_HOME)) then
+  # use the full path in case the path hasn't been set
+    # setenv SHELL $BASH_HOME
+    # echo will start $BASH_HOME
+    exec $BASH_HOME
+endif

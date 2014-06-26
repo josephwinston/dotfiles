@@ -1,0 +1,13 @@
+# /bin/csh -f
+
+#
+# $Id: .alias,v 1.1 2000/09/05 00:24:12 CVS_jody Exp $
+#
+
+# Use the C Shell
+
+alias zap '(set j=`ps -el|grep \!*|head -1`;kill -9 $j[4]) >& /dev/null'
+alias running "ps -el | grep \!* |& grep -v 'grep \!*' "
+alias clear "tput clear"
+
+alias ls "ls -C --color=auto"

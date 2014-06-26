@@ -1,0 +1,137 @@
+# /bin/csh -f
+
+if ($?PKG_CONFIG_PATH == 0) then
+  setenv PKG_CONFIG_PATH /usr/lib64/pkgconfig
+endif
+
+setenv PKG_CONFIG_PATH `echo ~/Tools/${FULLNAME}/lib/pkgconfig`:${PKG_CONFIG_PATH}
+
+if ($?LD_LIBRARY_PATH == 0) then
+  setenv LD_LIBRARY_PATH `echo ~/Tools/${FULLNAME}/lib64`
+else
+  setenv LD_LIBRARY_PATH `echo ~/Tools/${FULLNAME}/lib64`:${LD_LIBRARY_PATH}
+endif
+
+#
+# Kills true type fonts in kde because of the work needed to get emacs
+# 23.x running
+#
+
+setenv LD_LIBRARY_PATH `echo ~/Tools/${FULLNAME}/lib`:${LD_LIBRARY_PATH}:
+
+#
+# What time zone
+#
+
+setenv TZ CST6CDT
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+# setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# more not less
+#
+
+setenv PAGER more
+
+#
+# X11 is here
+#
+
+setenv X11HOME /usr/X11R6
+
+# Where the application defaults are
+# This will work for R2-R5
+# When searching for the resource files, the bindings to XtFindFile are
+# ALWAYS:
+#  %T -> "app-defaults"
+#  %N -> <application class name>
+#  %S -> ""
+#
+# blank is /usr/lib/X11/app-defaults
+#
+
+setenv XAPPLRESDIR ~/.app-defaults
+
+setenv XFILESEARCHPATH `echo ~/.%T/%N%S`
+setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%S
+setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%C
+
+setenv XUSERFILESEARCHPATH `echo ~/.desktop-$HOSTNAME/%N`
+
+#
+# What editor
+#
+
+setenv EDITOR emacsclient
+
+#
+# Set up BASH
+#
+
+setenv BASH_HOME /bin/bash
+
+#
+# PYTHON
+#
+
+setenv PYTHONSTARTUP ~/.pythonrc.py
+
+setenv http_proxy http://np1prxy801.corp.halliburton.com:80
+setenv https_proxy http://np1prxy801.corp.halliburton.com:80
+setenv ftp_proxy http://np1prxy801.corp.halliburton.com:80
+
+#
+# distcc
+#
+
+setenv DISTCC_HOSTS "localhost intel64build1.lgc.com intel64build2.lgc.com intel64build4.lgc.com intel64build5.lgc.com cshp.lgc.com dhhp.lgc.com"
+
+setenv LM_LICENSE_FILE 2013@houlic01.lgc.com
+
+setenv JAVA_HOME ${HOME}/Tools/${FULLNAME}/jdk1.6.0_30
+
+setenv LGCBUILD ${HOME}/work/lgcbuild 
+
+#
+# lgcbuild
+#
+
+setenv ARTIFACT_USER meinstall
+setenv ARTIFACT_PASS install@now
+
+#
+# Certificates
+#
+
+setenv GIT_SSL_NO_VERIFY true
+
+#
+# Scala
+#
+
+setenv SCALA_HOME ${HOME}/Tools/typesafe-stack
+setenv AKKA_HOME ${HOME}/Tools/typesafe-stack
+
+if ( -e ~/.$FULLNAME/$DOMAIN/.lgc ) then
+  source ~/.$FULLNAME/$DOMAIN/.lgc
+  # echo done source ~/.$FULLNAME/$DOMAIN/.lgc
+else
+  echo ~/.$FULLNAME/$DOMAIN/.lgc not found
+endif
+
+#
+# Intel
+#
+
+if ($?CSH_SOURCED_ICC == 0) then
+  source ~/Tools/$FULLNAME/Intel/bin/compilervars.csh intel64
+  setenv CSH_SOURCED_ICC
+endif
+
+

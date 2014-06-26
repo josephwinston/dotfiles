@@ -1,0 +1,94 @@
+# Copyright (c) 1991 Bell Communications Research, Inc. (Bellcore)
+# 
+# Permission to use, copy, modify, and distribute this material 
+# for any purpose and without fee is hereby granted, provided 
+# that the above copyright notice and this permission notice 
+# appear in all copies, and that the name of Bellcore not be 
+# used in advertising or publicity pertaining to this 
+# material without the specific, prior written permission 
+# of an authorized representative of Bellcore.  BELLCORE 
+# MAKES NO REPRESENTATIONS ABOUT THE ACCURACY OR SUITABILITY 
+# OF THIS MATERIAL FOR ANY PURPOSE.  IT IS PROVIDED "AS IS", 
+# WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
+#
+# Mailcap file for Netscape
+#
+# Users may override or extend this with a .mailcap file in
+# their own directory.  Netscape will search both mailcap
+# files looking for a match.
+#
+# imgview currently can view SGI, TIFF, JFIF/JPEG, and GIF formats.
+# Netscape has builtin viewing support for GIF and JFIF and if the
+# mailcap entries for these are commented out, it will display those
+# images as a new page when downloaded.  However, for consistency
+# the default is to use the external viewer.
+#
+image/x-sgi-image; imgview -nofork %s; compose=imgworks %s; \
+	description="SGI image"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/image.xbm"
+image/x-bitmap; bitmap %s; description="X11 bitmap"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/bitmap.xbm"
+image/x-xpm1; olpixmap %s; description="OL pixmap"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/bitmap.xbm"
+image/tiff;imgview -nofork %s; compose=imgworks %s; description="TIFF image"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/image.xbm"
+image/gif;imgview -nofork %s; compose=imgworks %s; description="GIF image"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/image.xbm"
+image/jpeg;imgview -nofork %s; compose=imgworks %s; description="JFIF image"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/image.xbm"
+image/jpg;imgview -nofork %s; compose=imgworks %s; description="JFIF image"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/image.xbm"
+#
+#
+audio/x-aifc; soundplayer %s; compose=soundeditor %s;	\
+	description="AIFC Audio"; x11-bitmap="/usr/lib/Zmail/bitmaps/sound.xbm"
+audio/x-aiff; soundplayer %s; compose=soundeditor %s;	\
+	description="AIFF Audio"; x11-bitmap="/usr/lib/Zmail/bitmaps/sound.xbm"
+audio/x-next; soundplayer %s; compose=soundeditor %s;	\
+	description="NeXT Audio"; x11-bitmap="/usr/lib/Zmail/bitmaps/sound.xbm"
+audio/x-wav; soundplayer %s; compose=soundeditor %s;	\
+	description="WAVE Audio"; x11-bitmap="/usr/lib/Zmail/bitmaps/sound.xbm"
+audio/x-mpeg; soundplayer %s; \
+        description="MPEG Audio"; x11-bitmap="/usr/lib/Zmail/bitmaps/sound.xbm"
+audio/*; soundplayer %s
+#
+#
+# Movieplayer understands SGI, QuickTime, MPEG Video, and MPEG Systems
+#
+video/x-sgi-movie; movieplayer -v -nofork %s; compose=moviemaker %s; \
+	description="SGI Movie"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/movie.xbm"
+video/mpeg; movieplayer -v -nofork %s; compose=moviemaker %s; \
+	description="MPEG Movie"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/movie.xbm"
+video/x-mpeg; movieplayer -v -nofork %s; compose=moviemaker %s; \
+	description="MPEG Movie"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/movie.xbm"
+video/x-mpeg-system; movieplayer -v -nofork %s; compose=moviemaker %s; \
+	description="MPEG Movie"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/movie.xbm"
+video/quicktime; movieplayer -v -nofork %s; compose=moviemaker %s; \
+	description="QuickTime Movie"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/movie.xbm"
+#
+application/x-showcase; showcase -f -v %s; \
+	compose=showcase %s; description="Showcase document"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/showcase.xbm"
+application/x-framemaker; fmclient -f %s; \
+	compose=fmclient -f %s; description="FrameMaker document"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/frame.xbm"
+application/x-wingz; Wingz %s; compose=Wingz %s; \
+	description="Wingz document"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/wingz.xbm"
+application/x-SYLK; Wingz %s; compose=Wingz %s; \
+	description="Spreadsheet in SYLK format"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/wingz.xbm"
+graphics/x-inventor; /usr/sbin/ivview %s; description="Inventor file"; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/inventor.xbm"
+application/postscript; /usr/bin/X11/xpsview -display :0.0 %s; \
+	description="PostScript Language";
+application/x-annotator; /usr/sbin/annotator -v -r %s; \
+	description="IRIS Annotator file"; compose=/usr/sbin/annotator %s; \
+	x11-bitmap="/usr/lib/Zmail/bitmaps/inventor.xbm"
+
+default; cat %s; copiousoutput

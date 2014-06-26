@@ -1,0 +1,13 @@
+#!/bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.powerpc-ibm-aix4.2.0.0/hls_ts/.xstart#1 $
+#
+
+#
+# Take a break 
+#
+
+rest &
+
+xemacs &

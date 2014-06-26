@@ -1,0 +1,106 @@
+# /bin/csh -f
+
+setenv LM_LICENSE_FILE /home/imperial2/lang/SunTech_License/license.dat
+setenv LANG_HOME /home/imperial2/lang
+
+#
+#	OPENWIN
+#
+
+setenv OPENWINHOME /home/brclib6/XMOTIF/openwin30
+
+#
+#	To Print out man pages using man -t man_entry
+#
+
+setenv TROFF ptroff
+# setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+#	What printer to use
+#
+
+	setenv PRINTER ir1039
+
+#
+#	X11 is here
+#
+
+	setenv X11HOME /usr/X11R6
+
+#
+#	Where the man pages are found
+#
+
+switch ($OS)
+  case SunOS:
+    if ($FULLNAME != "sparc-sun-solaris2.4") then
+      set manpath = ( $LANG_HOME/man )
+      set manpath = ( $manpath ~spirit2/PURIFY-3.0/SunOS/man )
+      set manpath = ( $manpath ~spirit2/QUANTIFY-2.0/SunOS/man )
+      set manpath = ( $manpath /usr/local/ir/software/man )
+      set manpath = ( $manpath /usr/local/man /usr/man )
+      set manpath = ( $manpath $OPENWINHOME/man )
+    else
+      set manpath = ( /usr/man )
+    endif
+  breaksw
+  
+  case IRIX:
+    set manpath = ( /usr/catman )
+  breaksw
+  
+  default:
+    set manpath = (/usr/man)
+  breaksw
+
+endsw
+
+setenv MANPATH `echo $manpath|sed s@" "@":"@g`
+
+# Where the application defaults are
+# This will work for R2-R5
+# When searching for the resource files, the bindings to XtFindFile are
+# ALWAYS:
+#  %T -> "app-defaults"
+#  %N -> <application class name>
+#  %S -> ""
+#
+# blank is /usr/lib/X11/app-defaults
+#
+
+setenv XAPPLRESDIR ~/.app-defaults
+
+#setenv XFILESEARCHPATH ~/.%T/%N%S:$X11HOME/lib/X11/%T/%N%S
+setenv FONTSERVER `echo "$HOSTNAME":7000`
+
+# setenv XKEYSYMDB $X11HOME/lib/X11/XKeysymDB
+
+#
+#	The location of libraries for EPTD
+#
+
+if ($OS == "SunOS") then
+  if ($FULLNAME != "sparc-sun-solaris2.4") then
+    set ldpath = (/usr/lib)
+    set ldpath = ($ldpath $OPENWINHOME/lib)
+    set ldpath = ($ldpath /home/hydra2/X11R5/OS41_SPARC/lib )
+    setenv LD_LIBRARY_PATH `echo $ldpath|sed s@" "@":"@g`	
+  endif
+endif
+
+# set up TeX
+
+if ($OS == "SunOS") then
+  setenv TEXFONTS ".:/usr/local/lib/tex/fonts"
+  setenv TEXFORMATS ".:/usr/local/lib/tex/formats"
+  setenv TEXINPUTS ".:/usr/local/lib/tex/inputs"
+  setenv TEXPOOL "/usr/local/lib/tex"
+  setenv MFBASES ".:/usr/local/lib/mf/bases"
+  setenv MFINPUTS ".:/usr/local/lib/mf/inputs"
+  setenv MFPOOL "/usr/local/lib/mf"
+endif
+
+# Set up BASH
+setenv BASH_HOME ~gclib/bin/gnu/bash

@@ -1,0 +1,36 @@
+#! /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.sparc-sun-sunos4.1.3/LDGO/.xstart#1 $
+#
+
+xsetroot -solid \#909090
+
+#
+# Start the audio server
+#
+
+au &
+rest &
+
+xbiff -geom -0+0&
+xload -geom 180x90-100+100 -name xload-`hostname`&
+# oclock -geom 90x90-0+100 -transparent &
+oclock -geom 90x90-0+100 &
+xemacs&
+beforelight&
+xearth -pos "fixed 29.5 -98.5"&
+
+if ($?MANAGER == 0) then
+  # setenv MANAGER "mwm"
+  setenv MANAGER "fvwm2"
+endif
+
+$MANAGER &
+
+#########################################################################
+#	Start up the console
+#	When this program dies, X dies
+#########################################################################
+exec xterm -geom 80x25+10+100 -C -iconic -name console
+

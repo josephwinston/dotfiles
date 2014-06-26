@@ -1,0 +1,25 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.sparc-sun-solaris2.6/LDGO/.startup#1 $
+#
+
+#
+# Use the C Shell
+#
+
+#
+# SHELL must be set to the full pathname for dbx to work
+#
+
+if (($SHELL != $BASH_HOME) && (-e $BASH_HOME)) then
+  # use the full path in case the path hasn't been set
+    # setenv SHELL $BASH_HOME
+    exec $BASH_HOME
+  else
+    setenv TCSH_HOME `which tcsh`
+    if ($SHELL != $TCSH_HOME) then
+      setenv SHELL $TCSH_HOME
+      exec tcsh
+    endif
+endif

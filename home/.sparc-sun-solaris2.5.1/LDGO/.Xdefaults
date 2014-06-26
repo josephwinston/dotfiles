@@ -1,0 +1,143 @@
+*customization:  -color
+
+! Turn backing store on
+*BackingStore:		Always
+*SaveUnder: 		True
+
+OpenWindows.WorkspaceColor:	#40a0c0
+OpenWindows.WindowColor:	#cccccc
+OpenWindows.IconLocation:	bottom
+OpenWindows.DragRightDistance:	100
+OpenWindows.SelectDisplaysMenu:	False
+OpenWindows.SetInput:	followmouse
+OpenWindows.Beep:	always
+OpenWindows.ScrollbarPlacement:	right
+OpenWindows.PopupJumpCursor:	True
+OpenWindows.MultiClickTimeout:	4
+Scrollbar.JumpCursor:	True
+*basicLocale:	C
+*displayLang:	C
+*inputLang:	C
+*numeric:	C
+*timeFormat:	C
+
+xbiff.Geometry:	48x48
+
+xclock*Geometry:	90x90
+#ifdef COLOR
+xclock*Background:	skyblue
+#endif
+xclock*wm_option.title:	off
+
+Clock*Background:     grey
+Clock*BorderColor:    light blue
+Clock*hour:           yellow
+Clock*jewel:          yellow
+Clock*minute:         yellow
+
+xcutsel.Font:	9x15
+
+!
+! xemacs 18.54 and 19.XX
+!
+Emacs.Geometry:	90x42+35+65
+Emacs.BitMapIcon:	on
+Emacs.font:		*-courier-medium-r-*-*-*-120-*-*-*-*-*-*
+!Emacs.font:		-*-fixed-medium-r-*-*-*-140*-*-*-*-*-*-*
+!Emacs.italic.attributeFont:  -*-courier-medium-o-*-*-*-140-*-*-*-*-iso8859-*
+!Emacs.bold-italic.attributeFont:  -*-courier-medium-o-*-*-*-140-*-*-*-*-iso8859-*
+
+xload*Foreground:	black
+xload*Geometry:	180x90
+xload*Background:	white
+xload*wm_option.title:	off
+
+#ifdef COLOR
+!xman*Command.foreground:	Blue
+!xman*Text.border:	Red
+!xman*topBox*foreground:	Blue
+#endif
+
+XTerm*saveLines:	300
+XTerm*waitforwm:	false
+xTerm*Font: 		-*-fixed-medium-r-*-*-*-120*-*-*-*-*-*-*
+XTerm*Font: 		-*-fixed-medium-r-*-*-*-120*-*-*-*-*-*-*
+XTerm*background:	white
+XTerm*foreground:	black
+XTerm*scrollBar:	false
+XTerm*cursorColor:	black
+
+!
+! XTerm*VT100.Translations: #override ~Meta <Btn2Up>: insert-selection(CUT_BUFFER0)
+
+!for bash's readline
+!but vi sure dosen't like it.
+
+! start in bash
+*VT100.Translations:#override\
+:<Key>Num_Lock:		keymap(Numbers)	\n\
+:<Key>F21:		string("")	\n\
+:<Key>F22:		string("")	\n\
+:<Key>F23:		string("")	\n\
+:<Key>F24:		string("")	\n\
+:<Key>F25:		string("")	\n\
+:<Key>F26:		string("")	\n\
+:<Key>F27:		string("<")	\n\
+:<Key>Up:		string(0x10)	\n\
+:<Key>F29:		string("<")	\n\
+:<Key>Left:		string(0x02)	\n\
+:<Key>F31:		string("")	\n\
+:<Key>Right:		string(0x06)	\n\
+:<Key>R13:		string(">")	\n\
+:<Key>Down:		string(0x0e)	\n\
+:<Key>F35:		string(">")	\n\
+:<Key>Insert:		string("")	\n\
+:<Key>Delete:		string("0x7f")	
+
+*BashKeymap.translations:#override\
+:<Key>Num_Lock:		keymap(Numbers)	\n\
+:<Key>F21:		string("")	\n\
+:<Key>F22:		string("")	\n\
+:<Key>F23:		string("")	\n\
+:<Key>F24:		string("")	\n\
+:<Key>F25:		string("")	\n\
+:<Key>F26:		string("")	\n\
+:<Key>F27:		string("<")	\n\
+:<Key>Up:		string(0x10)	\n\
+:<Key>F29:		string("<")	\n\
+:<Key>Left:		string(0x02)	\n\
+:<Key>F31:		string("")	\n\
+:<Key>Right:		string(0x06)	\n\
+:<Key>R13:		string(">")	\n\
+:<Key>Down:		string(0x0e)	\n\
+:<Key>F35:		string(">")	\n\
+:<Key>Insert:		string("")	\n\
+:<Key>Delete:		string("0x7f")	
+
+!move to numbers
+
+*NumbersKeymap.translations:#override\
+:<Key>Num_Lock:		keymap(Bash)	\n\
+:<Key>F21:		string("")	\n\
+:<Key>F22:		string("")	\n\
+:<Key>F23:		string("")	\n\
+:<Key>F24:		string("")	\n\
+:<Key>F25:		string("")	\n\
+:<Key>F26:		string("")	\n\
+:<Key>F27:		string("7")	\n\
+:<Key>Up:		string("8")	\n\
+:<Key>F29:		string("9")	\n\
+:<Key>Left:		string("4")	\n\
+:<Key>F31:		string("5")	\n\
+:<Key>Right:		string("6")	\n\
+:<Key>R13:		string("1")	\n\
+:<Key>Down:		string("2")	\n\
+:<Key>F35:		string("3")	\n\
+:<Key>Insert:		string("0")	\n\
+:<Key>Delete:		string(".")	
+
+!
+! No License Warnings
+!
+
+*disableLicenseWarnings:	TRUE

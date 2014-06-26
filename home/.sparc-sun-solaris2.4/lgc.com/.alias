@@ -1,0 +1,7 @@
+# /bin/csh -f
+
+# Use the C Shell
+
+alias running "ps ax | grep \!* |& grep -v 'grep \!*' "
+alias zap '(set j=`ps -ax|grep \!*|head -1`;kill -9 $j[1]) >& /dev/null'
+

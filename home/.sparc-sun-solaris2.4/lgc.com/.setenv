@@ -1,0 +1,92 @@
+# /bin/csh -f
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+# setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# What printer to use
+#
+
+setenv PRINTER ljet2p
+# setenv PRINTER laserjet
+
+#
+# X11 is here
+#
+
+setenv X11HOME /usr/openwin
+setenv OPENWINHOME /usr/openwin
+
+#
+# Where the man pages are found
+#
+
+set manpath = ($X11HOME/man)
+set manpath = ($manpath /usr/local/man /usr/man)
+set manpath = ($manpath $OPENWINHOME/man )
+
+setenv MANPATH `echo $manpath|sed s@" "@":"@g`
+
+# Where the application defaults are
+# This will work for R2-R5
+# When searching for the resource files, the bindings to XtFindFile are
+# ALWAYS:
+#  %T -> "app-defaults"
+#  %N -> <application class name>
+#  %S -> ""
+#
+# blank is /usr/lib/X11/app-defaults
+#
+
+setenv XAPPLRESDIR ~/.app-defaults
+
+#setenv XFILESEARCHPATH ~/.%T/%N%S:$X11HOME/lib/X11/%T/%N%S
+setenv FONTSERVER `echo "$HOSTNAME":7000`
+
+setenv XKEYSYMDB $X11HOME/lib/X11/XKeysymDB
+
+#
+# The location of libraries for xprt.com
+#
+
+set ldpath = ($X11HOME/lib)
+set ldpath = ($ldpath $OPENWINHOME/lib)
+set ldpath = ($ldpath /usr/lib)
+setenv LD_LIBRARY_PATH `echo $ldpath|sed s@" "@":"@g`	
+
+
+#
+# set up TeX
+#
+
+setenv TEXFONTS ".:/usr/local/lib/tex/fonts"
+setenv TEXFORMATS ".:/usr/local/lib/tex/formats"
+setenv TEXINPUTS ".:/usr/local/lib/tex/inputs"
+setenv TEXPOOL "/usr/local/lib/tex"
+setenv MFBASES ".:/usr/local/lib/mf/bases"
+setenv MFINPUTS ".:/usr/local/lib/mf/inputs"
+setenv MFPOOL "/usr/local/lib/mf"
+
+#
+# Set up CVS
+#
+
+setenv CVSROOT /hosts/apollo/usr/apollo1/CVSROOT 
+
+#
+# Set up lclint
+#
+
+setenv LCLIMPORTDIR /usr/local/lib/lclint/imports
+setenv LARCH_PATH .:/usr/local/lib/lclint
+
+#
+# Set up BASH
+#
+
+setenv BASH_HOME /usr/local/bin/bash

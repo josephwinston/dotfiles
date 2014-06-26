@@ -1,0 +1,26 @@
+# /bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.sparc-sun-sunos4.1.3_U1/xprt.com/.startup#1 $
+#
+
+#
+# Use the C Shell
+#
+
+#if (($SHELL != "bash") && (-e $BASH_HOME)) then
+#  if ($TERM != "emacs") then
+#    setenv SHELL bash
+#    exec expect ~/Tools/bin/xprt.com/carpal
+#  else
+#    # use the full path in case the path hasn't been set
+#    exec $BASH_HOME
+#  endif
+#endif
+
+
+if (($SHELL != "bash") && (-e $BASH_HOME)) then
+   # use the full path in case the path hasn't been set
+   exec $BASH_HOME
+endif
+  

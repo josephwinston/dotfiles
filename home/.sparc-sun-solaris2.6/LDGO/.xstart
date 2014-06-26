@@ -1,0 +1,13 @@
+#!/bin/csh -f
+
+#
+# $Id: //depot/Jody/main/jody/.sparc-sun-solaris2.6/LDGO/.xstart#1 $
+#
+
+#
+# Take a break 
+#
+
+rest &
+
+xemacs &
