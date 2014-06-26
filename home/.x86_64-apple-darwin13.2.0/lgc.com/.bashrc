@@ -52,3 +52,8 @@ if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.ba
     . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 fi
     
+#
+# add homeshick
+#
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
