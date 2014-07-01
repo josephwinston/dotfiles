@@ -134,16 +134,16 @@
 ;; clang and autocomplete need emacs 24.3 or later
 ;;
 
-(add-to-list 'load-path "~/.x86_64-apple-darwin13.0.0/lgc.com/yasnippet")
+(add-to-list 'load-path "~/.x86_64-apple-darwin13.2.0/lgc.com/yasnippet")
 (setq yas-snippet-dirs
-      '("~/.x86_64-apple-darwin13.0.0/lgc.com/yasnippet/personal/snippets"            ;; personal snippets
-        "~/.x86_64-apple-darwin13.0.0/lgc.com/yasnippet/snippets"    ;; the default collection
+      '("~/.x86_64-apple-darwin13.2.0/lgc.com/yasnippet/personal/snippets"            ;; personal snippets
+        "~/.x86_64-apple-darwin13.2.0/lgc.com/yasnippet/snippets"    ;; the default collection
         ))
 (require 'yasnippet)
 (yas-global-mode 1)
 
-(add-to-list 'load-path "~/.x86_64-apple-darwin13.0.0/lgc.com/auto-complete-1.3.1")
-(add-to-list 'load-path "~/.x86_64-apple-darwin13.0.0/lgc.com/emacs-clang-complete-async") 
+(add-to-list 'load-path "~/.x86_64-apple-darwin13.2.0/lgc.com/auto-complete-1.3.1")
+(add-to-list 'load-path "~/.x86_64-apple-darwin13.2.0/lgc.com/emacs-clang-complete-async") 
 
 (defun ac-common-setup ()
   (setq ac-sources (append ac-sources '(ac-source-dictionary))))
