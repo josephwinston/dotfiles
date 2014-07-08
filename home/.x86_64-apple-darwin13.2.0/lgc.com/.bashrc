@@ -31,12 +31,6 @@ total()
     END{printf("%d bytes in %d files\n", tot, num)}'
 }
 
-growl() 
-{ 
-    echo -e $'\e]9;'${1}'\007'; 
-    return; 
-}
-
 # alias ls "ls -C --color=auto"
 
 # alias versions "rpm -q -a --queryformat '%{NAME} %{VERSION}\n'"
