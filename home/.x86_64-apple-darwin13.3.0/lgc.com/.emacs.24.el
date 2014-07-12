@@ -1,6 +1,20 @@
 ;; -*- Emacs-Lisp -*-
 
 ;;
+;; MELPA Stable (https://github.com/milkypostman/melpa)
+;;
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
+(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
+
+;;
 ;; Fix "no access to tty (Bad file descriptor)"
 ;; See https://lists.gnu.org/archive/html/help-gnu-emacs/2004-08/msg00112.html
 ;;
