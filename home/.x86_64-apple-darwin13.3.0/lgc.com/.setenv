@@ -118,10 +118,7 @@ switch (${LOCATION})
 #    setenv ftp_proxy http://np1prxy801.corp.halliburton.com:80
 #    setenv RSYNC_PROXY np1prxy801.corp.halliburton.com:80
     setenv http_proxy http://localhost:3128
-# 
-# Because git and citrix are failing with cntlm 0.92.3
-#
-    setenv https_proxy http://np1prxy801.corp.halliburton.com:80
+    setenv https_proxy http://localhost:3128
     setenv ftp_proxy http://localhost:3128
     setenv RSYNC_PROXY localhost:3128
   breaksw
