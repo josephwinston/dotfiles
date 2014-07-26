@@ -16,6 +16,7 @@ case ${LOCATION} in
 	unset RSYNC_PROXY
 	cp ${HOME}/.subversion/Home/servers ${HOME}/.subversion/servers
 	cp ${HOME}/.m2/Home/settings.xml ${HOME}/.m2/settings.xml
+	cp ${HOME}/.network/Home/.gitconfig ${HOME}/.gitconfig
 	;;
     "Halliburton")
 #	PROXY=houprxy801.corp.halliburton.com
@@ -29,6 +30,7 @@ case ${LOCATION} in
 	export RSYNC_PROXY=${PROXY}:${PORT}
 	cp ${HOME}/.subversion/Halliburton/servers ${HOME}/.subversion/servers
 	cp ${HOME}/.m2/Halliburton/settings.xml ${HOME}/.m2/settings.xml
+	cp ${HOME}/.network/Halliburton/.gitconfig ${HOME}/.gitconfig
 	;;
     "Automatic")
 	unset http_proxy
@@ -37,6 +39,7 @@ case ${LOCATION} in
 	unset RSYNC_PROXY
 	cp ${HOME}/.subversion/Automatic/servers ${HOME}/.subversion/servers
 	cp ${HOME}/.m2/Automatic/settings.xml ${HOME}/.m2/settings.xml
+	cp ${HOME}/.network/Automatic/.gitconfig ${HOME}/.gitconfig
 	;;
     *)
 	unset http_proxy

@@ -1,0 +1,197 @@
+# /bin/csh -f
+
+#
+# $Id: .setenv,v 1.1 2004/08/09 23:13:08 CVS_jody Exp $
+#
+
+#
+# What time zone
+#
+
+setenv TZ CST6CDT
+
+#
+# What man pages
+#
+
+setenv MANPATH `manpath -q`
+#setenv MANPATH ${MANPATH}:/Library/Framework/Mono/Versions/Current/man
+setenv MANPATH ${MANPATH}:/opt/local/share/man
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+# setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# more not less
+#
+
+setenv PAGER more
+
+#
+# So git works correctly.  See http://eigenjoy.com/2008/07/23/mac-os-x-color-showing-escwhatever-for-git-diff-colors-and-more/
+#
+
+setenv MORE -erX
+setenv LESS -erX
+
+#
+# Set up CVS
+#
+
+# setenv CVSROOT :pserver:CVS_jody@blossom.mine.nu:/home/CACHE/CVS_jody/CACHE/CVSROOT
+
+#
+# I like the old colors better
+#
+
+setenv LS_COLORS "no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:*.sh=01;32:*.csh=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31:*.rpm=01;31:*.cpio=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.xbm=01;35:*.xpm=01;35:*.png=01;35:*.tif=01;35:"
+
+#
+# See http://developer.apple.com/techpubs/macosx/ReleaseNotes/AvailabilityMacros.html
+#
+
+# setenv MACOSX_DEPLOYMENT_TARGET "10.2" # Was 10.2
+
+#
+# RSYNC
+#
+
+setenv RSYNC_RSH ssh
+
+#
+# EDITOR
+#
+
+setenv EDITOR /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient
+
+#
+# Bash 
+#
+
+setenv BASH_HOME /bin/bash
+
+#
+# Macports
+#
+
+if ($?DYLD_FALLBACK_LIBRARY_PATH == 0) then
+   setenv DYLD_FALLBACK_LIBRARY_PATH /opt/local/lib
+else
+   setenv DYLD_FALLBACK_LIBRARY_PATH /opt/local/lib:${DYLD_FALLBACK_LIBRARY_PATH}
+endif
+
+#
+# numba
+#
+
+# setenv DYLD_FALLBACK_LIBRARY_PATH ${DYLD_FALLBACK_LIBRARY_PATH}:/usr/lib
+
+#
+# Python
+#
+
+setenv PYTHONSTARTUP  ~/.pythonrc.py
+
+#
+# Proxies
+#
+
+if ( -e "/usr/sbin/scselect" ) then
+  setenv LOCATION `/usr/sbin/scselect | perl -ne 'if (m/^\s+\*\s+(\S+)\s+\((.+)\)$/) { print "$2\n"; }'`
+endif
+
+switch (${LOCATION})
+  case "Home":
+    unsetenv http_proxy
+    unsetenv https_proxy
+    unsetenv ftp_proxy
+    unsetenv RSYNC_PROXY
+  breaksw
+  case "Halliburton":
+#    setenv http_proxy http://np1prxy801.corp.halliburton.com:80
+#    setenv https_proxy http://np1prxy801.corp.halliburton.com:80
+#    setenv ftp_proxy http://np1prxy801.corp.halliburton.com:80
+#    setenv RSYNC_PROXY np1prxy801.corp.halliburton.com:80
+    setenv http_proxy http://localhost:3128
+    setenv https_proxy http://localhost:3128
+    setenv ftp_proxy http://localhost:3128
+    setenv RSYNC_PROXY localhost:3128
+  breaksw
+  case "Automatic":
+    unsetenv http_proxy
+    unsetenv https_proxy
+    unsetenv ftp_proxy
+    unsetenv RSYNC_PROXY
+  breaksw
+  default:
+    unsetenv http_proxy
+    unsetenv https_proxy
+    unsetenv ftp_proxy
+    unsetenv RSYNC_PROXY
+  breaksw
+endsw
+     
+#
+# pyface
+#
+
+setenv ETS_TOOLKIT  qt4
+# setenv QT_API pyqt
+
+# 
+#  Remember to set the environment variable GRADLE_HOME to the path to
+# the gradle distribution: /opt/local/share/java/gradle
+#
+
+setenv GRADLE_HOME /opt/local/share/java/gradle
+
+#
+# DSD 8.4 or newer
+#
+
+setenv JAVA_HOME `/usr/libexec/java_home --version 1.7`
+
+#
+# ECLIPSE
+#
+
+setenv ECLIPSE_HOME ${HOME}/.eclipse
+
+#
+# lgcbuild
+#
+
+setenv LGCBUILD ${HOME}/work/lgcbuild
+
+#
+# Turn on debugging (and we hope that everyone recognizes this flag)
+#
+
+setenv NATIVE_DEBUG true
+
+setenv ARTIFACT_USER meinstall
+setenv ARTIFACT_PASS install@now
+
+setenv OS_PLATFORM mac64
+setenv RELEASE_NAME DS_5000_8_1_0_MAC
+
+# setenv SVN /usr/bin/svn
+setenv SVN /opt/local/bin/svn
+
+#
+# OpenWorks
+#
+
+# if ( -e ~/.$FULLNAME/$DOMAIN/.lgc ) then
+#  # echo "Not using ~/.$FULLNAME/$DOMAIN/.lgc"
+#  source ~/.$FULLNAME/$DOMAIN/.lgc
+#  # echo done source ~/.$FULLNAME/$DOMAIN/.lgc
+# else
+#  echo ~/.$FULLNAME/$DOMAIN/.lgc not found
+# endif
+
