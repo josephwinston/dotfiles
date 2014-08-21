@@ -22,7 +22,7 @@ case ${LOCATION} in
 #	PROXY=houprxy801.corp.halliburton.com
 #	PROXY=np1prxy801.corp.halliburton.com
 #       PORT=80
-	PROXY=localhost
+	PROXY=127.0.0.1
         PORT=3128
 	export http_proxy=http://${PROXY}:${PORT}
 	export https_proxy=http://${PROXY}:${PORT}

@@ -1,6 +1,12 @@
 ;; -*- Emacs-Lisp -*-
 
 ;;
+;; homeschick puts symbolic links for dotfile
+;;
+
+(setq vc-follow-symlinks t)
+
+;;
 ;; MELPA Stable (https://github.com/milkypostman/melpa)
 ;;
 

@@ -61,6 +61,26 @@ if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.ba
 fi
     
 #
+# Docker
+#
+
+export DOCKER_HOST=tcp://192.168.59.103:2375
+
+if [ -f ~/Tools/x86_64-apple-darwin14.0.0/share/docker-completion.bash ]; then
+    . ~/Tools/x86_64-apple-darwin14.0.0/share/docker-completion.bash
+fi
+
+#
+# See http://blog.sequenceiq.com/blog/2014/07/05/docker-debug-with-nsenter-on-boot2docker/
+#
+
+docker-enter() 
+{
+    boot2docker ssh '[ -f /var/lib/boot2docker/nsenter ] || docker run --rm -v /var/lib/boot2docker/:/target jpetazzo/nsenter'
+    boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter "$@"
+}
+
+#
 # add homeshick
 #
 

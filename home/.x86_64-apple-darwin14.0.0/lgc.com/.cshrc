@@ -18,4 +18,14 @@ set path = ($path /usr/texbin)
 set path = (/opt/local/bin $path)
 set path = (/opt/local/sbin $path)
 
+#
+# npm
+#
 
+set path = ($path ~/node_modules/.bin)
+
+#
+# Ruby
+#
+
+# set path = ($path ~/.gem/ruby/2.0.0/bin)
