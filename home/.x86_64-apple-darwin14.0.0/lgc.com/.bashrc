@@ -23,18 +23,11 @@ zap()
       fi
 }
 
-
 total()
 {
    ls -l |gawk 'BEGIN{tot = 0;num = 0} \
     {tot += $5; num++} \
     END{printf("%d bytes in %d files\n", tot, num)}'
-}
-
-growl() 
-{ 
-    echo -e $'\e]9;'${1}'\007'; 
-    return; 
 }
 
 # alias ls "ls -C --color=auto"
@@ -48,8 +41,8 @@ growl()
 #
 
 alias use_xcode5 "sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer"
-alias use_xcode6 "sudo xcode-select -switch /Applications/Xcode6-Beta4.app/Contents/Developer"
-alias swift "xcrun swift"
+alias use_xcode6 "sudo xcode-select -switch /Applications/Xcode-Beta.app/Contents/Developer"
+# alias swift "xcrun swift"
 
 #
 # Git completion
