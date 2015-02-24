@@ -27,6 +27,7 @@ case ${LOCATION} in
 	export http_proxy=http://${PROXY}:${PORT}
 	export https_proxy=http://${PROXY}:${PORT}
 	export ftp_proxy=http://${PROXY}:${PORT}
+	export no_proxy="localhost, *.lgc.com, *.houston.lgc.com, *.corp.halliburton.com, *.dev, 127.0.0.*, 10.*, 192.168.*, .sock"
 	export RSYNC_PROXY=${PROXY}:${PORT}
 	cp ${HOME}/.subversion/Halliburton/servers ${HOME}/.subversion/servers
 	cp ${HOME}/.m2/Halliburton/settings.xml ${HOME}/.m2/settings.xml

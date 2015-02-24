@@ -121,6 +121,7 @@ switch (${LOCATION})
     setenv https_proxy http://127.0.0.1:3128
     setenv ftp_proxy http://127.0.0.1:3128
     setenv RSYNC_PROXY 127.0.0.1:3128
+    setenv no_proxy "localhost, *.lgc.com, *.houston.lgc.com, *.corp.halliburton.com, *.dev, 127.0.0.*, 10.*, 192.168.*, .sock"
   breaksw
   case "Automatic":
     unsetenv http_proxy
@@ -182,6 +183,14 @@ setenv RELEASE_NAME DS_5000_8_1_0_MAC
 
 # setenv SVN /usr/bin/svn
 setenv SVN /opt/local/bin/svn
+
+#
+# Docker
+#
+
+setenv DOCKER_TLS_VERIFY 1
+setenv DOCKER_HOST tcp://192.168.59.103:2376
+setenv DOCKER_CERT_PATH /Users/hb55683/.boot2docker/certs/boot2docker-vm
 
 #
 # OpenWorks
