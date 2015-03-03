@@ -1,0 +1,5 @@
+#! /bin/sh
+[ $# -eq 7 ] && ${HOME}/Tools/${FULLNAME}/bin/extMerge "$2" "$5"
+
+
+
