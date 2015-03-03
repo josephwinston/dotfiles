@@ -8,7 +8,7 @@
     <array>
       <string>/opt/local/sbin/cntlm</string>
       <string>-c</string>
-      <string>/Users/hb55683/Tools/x86_64-apple-darwin14.1.0/etc/cntlm.conf</string>
+      <string>/Users/hb55683/Tools/x86_64-apple-darwin14.3.0/etc/cntlm.conf</string>
     </array>
     <key>KeepAlive</key>
     <false/>

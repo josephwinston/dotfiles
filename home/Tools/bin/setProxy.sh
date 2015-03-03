@@ -13,6 +13,7 @@ case ${LOCATION} in
 	unset http_proxy
 	unset https_proxy
 	unset ftp_proxy
+	unset no_proxy
 	unset RSYNC_PROXY
 	cp ${HOME}/.subversion/Home/servers ${HOME}/.subversion/servers
 	cp ${HOME}/.m2/Home/settings.xml ${HOME}/.m2/settings.xml
@@ -37,6 +38,7 @@ case ${LOCATION} in
 	unset http_proxy
 	unset https_proxy
 	unset ftp_proxy
+	unset no_proxy
 	unset RSYNC_PROXY
 	cp ${HOME}/.subversion/Automatic/servers ${HOME}/.subversion/servers
 	cp ${HOME}/.m2/Automatic/settings.xml ${HOME}/.m2/settings.xml
@@ -46,6 +48,7 @@ case ${LOCATION} in
 	unset http_proxy
 	unset https_proxy
 	unset ftp_proxy
+	unset no_proxy
 	unset RSYNC_PROXY
 	cp ${HOME}/.subversion/Automatic/servers ${HOME}/.subversion/servers
 	cp ${HOME}/.m2/Automatic/settings.xml ${HOME}/.m2/settings.xml
