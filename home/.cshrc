@@ -138,26 +138,6 @@ if ( -e ~/.$FULLNAME/$DOMAIN/.startup ) then
   # echo done source ~/.$FULLNAME/$DOMAIN/.startup
 endif
 
-
-##
-# Your previous /Users/hb55683/.cshrc file was backed up as /Users/hb55683/.cshrc.macports-saved_2013-11-01_at_13:27:22
-##
-
 # MacPorts Installer addition on 2013-11-01_at_13:27:22: adding an appropriate PATH variable for use with MacPorts.
 setenv PATH /opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
-
-
-set path=( $path "/Users/hb55683/NVPACK/android-sdk-macosx/platform-tools" )
-
-set path=( $path "/Users/hb55683/NVPACK/android-sdk-macosx/build-tools" )
-
-set path=( $path "/Users/hb55683/NVPACK/android-sdk-macosx/tools" )
-
-setenv NDK_ROOT "/Users/hb55683/NVPACK/android-ndk-r9c"
-
-
-
-
-
-set path=( $path "/Users/hb55683/NVPACK/apache-ant-1.8.2/bin" )
