@@ -141,7 +141,7 @@ endsw
 # pyface
 #
 
-setenv ETS_TOOLKIT  qt4
+setenv ETS_TOOLKIT qt4
 # setenv QT_API pyqt
 
 # 
@@ -155,7 +155,8 @@ setenv GRADLE_HOME /opt/local/share/java/gradle
 # DSD 8.4 or newer
 #
 
-setenv JAVA_HOME `/usr/libexec/java_home --version 1.7`
+# setenv JAVA_HOME `/usr/libexec/java_home --version 1.7`
+setenv JAVA_HOME `/usr/libexec/java_home --version 1.8`
 
 #
 # ECLIPSE
