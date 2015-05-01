@@ -1,0 +1,1 @@
+/Users/hb55683/.homesick/repos/dotfiles/home/.x86_64-apple-darwin14.4.0/lgc.com/corp.halliburton.com
