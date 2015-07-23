@@ -157,4 +157,10 @@
 # store-ssl-client-cert-pp = no
 # store-ssl-client-cert-pp-plaintext = no
 
+#http-proxy-host = np1prxy801.corp.halliburton.com
+#http-proxy-port = 80
+
+http-proxy-exceptions = *.lgc.com
+http-proxy-host = 127.0.0.1
+http-proxy-port = 3128
 
