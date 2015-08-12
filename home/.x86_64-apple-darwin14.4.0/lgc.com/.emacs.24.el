@@ -208,3 +208,16 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;;
+;; melpa
+;;
+
+;; (require 'package)
+;; (add-to-list 'package-archives
+;; 	     '("melpa" . "http://melpa.org/packages/") t)
+
+;;
+;; magit
+;;
+
+(global-set-key (kbd "C-x g") 'magit-status)
