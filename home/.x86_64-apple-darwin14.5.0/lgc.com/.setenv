@@ -186,14 +186,6 @@ setenv RELEASE_NAME DS_5000_8_1_0_MAC
 setenv SVN /opt/local/bin/svn
 
 #
-# Docker
-#
-
-setenv DOCKER_TLS_VERIFY 1
-setenv DOCKER_HOST tcp://192.168.59.103:2376
-setenv DOCKER_CERT_PATH /Users/hb55683/.boot2docker/certs/boot2docker-vm
-
-#
 # OpenWorks
 #
 
