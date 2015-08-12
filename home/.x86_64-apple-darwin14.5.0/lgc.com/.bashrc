@@ -57,9 +57,11 @@ fi
 # Docker
 #
 
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/hb55683/.boot2docker/certs/boot2docker-vm
+#
+# http://stackoverflow.com/a/26288299/920629
+#
+
+eval "$(boot2docker shellinit 2>/dev/null)"
 
 if [ -f ~/Tools/x86_64-apple-darwin14.0.0/share/docker-completion.bash ]; then
     . ~/Tools/x86_64-apple-darwin14.0.0/share/docker-completion.bash
