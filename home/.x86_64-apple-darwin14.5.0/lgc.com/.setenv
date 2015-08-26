@@ -203,3 +203,11 @@ setenv SVN /opt/local/bin/svn
 
 setenv HADOOP_PREFIX ~/src/Tools/HADOOP/hadoop-2.6.0
 setenv HADOOP_HOME ~/src/Tools/HADOOP/hadoop-2.6.0
+
+#
+# GOPATH
+#
+
+setenv GOPATH ~/src/Languages/GO
+
+

@@ -61,7 +61,7 @@ fi
 # http://stackoverflow.com/a/26288299/920629
 #
 
-eval "$(boot2docker shellinit 2>/dev/null)"
+# eval "$(boot2docker shellinit 2>/dev/null)"
 
 if [ -f ~/Tools/x86_64-apple-darwin14.0.0/share/docker-completion.bash ]; then
     . ~/Tools/x86_64-apple-darwin14.0.0/share/docker-completion.bash
@@ -82,3 +82,9 @@ docker-enter()
 #
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+#
+# Add iterm completion
+#
+
+source "$HOME/.iterm2_shell_integration.bash"

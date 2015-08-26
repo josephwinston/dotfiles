@@ -29,3 +29,16 @@ set path = ($path ~/node_modules/.bin)
 #
 
 # set path = ($path ~/.gem/ruby/2.0.0/bin)
+
+#
+# GO
+#
+
+set path = ($path ~/src/Languages/GO/bin)
+
+#
+# iterm integration
+#
+
+# test -e ${HOME}/.iterm2_shell_integration.tcsh && source ${HOME}/.iterm2_shell_integration.tcsh
+
