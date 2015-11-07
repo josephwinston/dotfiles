@@ -13,7 +13,7 @@
 ;; Filter using tmda
 ;;
 
-(setq sendmail-program "/usr/bin/tmda-sendmail")
+;; (setq sendmail-program "/usr/bin/tmda-sendmail")
 
 ;;(setq send-mail-function 'smtpmail-send-it) ; Last set value 
 

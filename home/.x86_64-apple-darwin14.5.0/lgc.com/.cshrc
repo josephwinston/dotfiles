@@ -18,6 +18,13 @@ set path = ($path /usr/texbin)
 set path = (/opt/local/bin $path)
 set path = (/opt/local/sbin $path)
 set path = (/opt/local/libexec/qt4/bin $path)
+set path = (/opt/local/libexec/qt4/bin $path)
+
+#
+# ceylon
+#
+
+set path = (~/src/Remote/GIT/ceylon-dist/dist/bin $path)
 
 #
 # npm

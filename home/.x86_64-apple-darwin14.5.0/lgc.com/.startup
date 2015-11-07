@@ -9,6 +9,7 @@
 #
 
 if (($SHELL != "bash") && (-e $BASH_HOME)) then
+     setenv SHELL $BASH_HOME
     # use the full path in case the path hasn't been set
      exec $BASH_HOME
   endif

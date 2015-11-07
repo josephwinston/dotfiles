@@ -70,11 +70,15 @@ setenv RSYNC_RSH ssh
 setenv EDITOR /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient
 
 #
-# Bash 
+# Bash (Use macports if possible
 #
 
-setenv BASH_HOME /bin/bash
-
+if ( -e /opt/local/bin/bash ) then
+  setenv BASH_HOME /opt/local/bin/bash
+else if ( -e /bin/bash ) then
+  setenv BASH_HOME /opt/local/bin/bash
+endif
+  
 #
 # Macports
 #
@@ -210,4 +214,9 @@ setenv HADOOP_HOME ~/src/Tools/HADOOP/hadoop-2.6.0
 
 setenv GOPATH ~/src/Languages/GO
 
+#
+# CEYLON
+#
+
+setenv CEYLON_HOME ~/src/Remote/GIT/ceylon-dist/dist
 
