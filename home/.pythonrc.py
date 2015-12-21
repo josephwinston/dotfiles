@@ -35,5 +35,5 @@ try:
     del os, histfile
 
 except ImportError:
-    print "Module readline not available."
+    pass
     
