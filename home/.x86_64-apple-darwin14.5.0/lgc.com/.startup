@@ -1,0 +1,16 @@
+# /bin/csh -f
+
+#
+# $Id: .startup,v 1.1 2004/08/09 23:13:08 CVS_jody Exp $
+#
+
+#
+# Use the C Shell
+#
+
+if (($SHELL != "bash") && (-e $BASH_HOME)) then
+     setenv SHELL $BASH_HOME
+    # use the full path in case the path hasn't been set
+     exec $BASH_HOME
+  endif
+endif

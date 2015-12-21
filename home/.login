@@ -13,19 +13,3 @@ endif
 
 source ~/.setenv
 # echo done source ~/.setenv
-
-
-
-set path=( $path "/Users/hb55683/NVPACK/android-sdk-macosx/platform-tools" )
-
-set path=( $path "/Users/hb55683/NVPACK/android-sdk-macosx/build-tools" )
-
-set path=( $path "/Users/hb55683/NVPACK/android-sdk-macosx/tools" )
-
-setenv NDK_ROOT "/Users/hb55683/NVPACK/android-ndk-r9c"
-
-
-
-
-
-set path=( $path "/Users/hb55683/NVPACK/apache-ant-1.8.2/bin" )
