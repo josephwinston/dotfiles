@@ -1,5 +1,11 @@
 # /bin/csh -f
 
+if ($?LD_LIBRARY_PATH == 0) then
+  setenv LD_LIBRARY_PATH /usr/local/lib
+else
+  setenv LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
+endif
+
 #
 # What time zone
 #
@@ -70,3 +76,8 @@ setenv PYTHONSTARTUP ~/.pythonrc.py
 setenv ARTIFACT_USER meinstall
 setenv ARTIFACT_PASS install@now
 
+#
+# Ceylon
+#
+
+setenv CEYLON_HOME /usr/share/ceylon/1.2.0
