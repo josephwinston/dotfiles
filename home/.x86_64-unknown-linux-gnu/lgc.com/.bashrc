@@ -37,10 +37,22 @@ if [ -f $HOME/src/Remote/GIT/git/contrib/completion/git-completion.bash ]; then
 fi
 
 #
+# Open functionality
+#
+
+alias open "xdg-open"
+
+#
 # Homesick
 #
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+#
+# marathonctl
+#
+
+alias marathonctl "docker run --rm --net=host shoenig/marathonctl:latest"
 
 #
 # enable programmable completion features (you don't need to enable
