@@ -11,10 +11,10 @@
 [merge]
 	tool = extMerge
 [mergetool "extMerge"]
-	cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+#	cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 	trustExitCode = false
 [diff]
-	external = extDiff
+#	external = extDiff
 [alias]
 	svn-diff = !git-svn-diff
 	info = !git-info
@@ -22,8 +22,6 @@
 	svn-oldest-ancestor = !bash -c 'diff -u <(git rev-list --first-parent "${1:-trunk}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
 	oldest-svn-ancestor = !bash -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-[credential]
-	helper = osxkeychain
 [push]
 	default = current
 [git-up "bundler"]
@@ -31,3 +29,10 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[url "https://"]
+        insteadOf = git://
+[http]
+	proxy = http://127.0.0.1:3128
+[https]
+	proxy = http://127.0.0.1:3128
+
