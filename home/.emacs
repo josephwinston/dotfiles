@@ -190,3 +190,6 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'narrow-to-page 'disabled nil)
+
+(set-background-color "white")
+
