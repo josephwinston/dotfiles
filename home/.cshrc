@@ -137,7 +137,3 @@ if ( -e ~/.$FULLNAME/$DOMAIN/.startup ) then
   source ~/.$FULLNAME/$DOMAIN/.startup
   # echo done source ~/.$FULLNAME/$DOMAIN/.startup
 endif
-
-# MacPorts Installer addition on 2013-11-01_at_13:27:22: adding an appropriate PATH variable for use with MacPorts.
-setenv PATH /opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
