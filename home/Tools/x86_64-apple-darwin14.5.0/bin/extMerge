@@ -1,1 +1,2 @@
-/Users/hb55683/.homesick/repos/dotfiles/home/Tools/x86_64-apple-darwin14.4.0/bin/extMerge
+#! /bin/sh
+/Applications/p4merge.app/Contents/MacOS/p4merge $*
