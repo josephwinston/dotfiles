@@ -56,6 +56,14 @@
 
 ;; Timezones
 
+;;
+;; Some "random" default
+;;
+
+(setq calendar-location-name "Houston, TX")
+(if (fboundp 'atan) (setq calendar-latitude 29.572084))
+(if (fboundp 'atan) (setq calendar-longitude -95.130292))
+
 (load (concat home-directory "/.$FULLNAME/$DOMAIN/.calendar.el") t)
 
 ;; Hooks
