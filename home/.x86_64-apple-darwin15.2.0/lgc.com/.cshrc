@@ -17,6 +17,7 @@ set path = ($path /usr/texbin)
 
 set path = (/opt/local/bin $path)
 set path = (/opt/local/sbin $path)
+set path = ($path /opt/local/libexec/qt4/bin)
 
 #
 # npm
