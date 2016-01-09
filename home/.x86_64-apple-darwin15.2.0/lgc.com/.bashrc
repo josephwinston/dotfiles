@@ -70,11 +70,18 @@ fi
 #
 
 if [ -f "$HOME/.homesick/repos/homeshick/homeshick.sh" ]; then
-    source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+    . "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fi
 
-if [ -e "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash" ];then
-   source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
+if [ -e "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash" ]; then
+   . "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 fi
 
+#
+# add iterm2 integration
+#
+
+if [ -e $HOME/.iterm2_shell_integration.bash ]; then
+    . $HOME/.iterm2_shell_integration.bash
+fi
 
