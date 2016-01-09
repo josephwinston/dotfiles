@@ -9,16 +9,16 @@
       <string>/opt/local/sbin/cntlm</string>
       <string>-v</string>
       <string>-c</string>
-      <string>/Users/hb55683/Tools/x86_64-apple-darwin14.5.0/etc/cntlm.conf</string>
+      <string>/Users/josephwinston/Tools/x86_64-apple-darwin15.2.0/etc/cntlm.conf</string>
     </array>
     <key>KeepAlive</key>
     <false/>
     <key>RunAtLoad</key>
     <true/>
     <key>StandardErrorPath</key>
-    <string>/Users/hb55683/Library/Logs/cntlm.log</string>
+    <string>/Users/josephwinston/Library/Logs/cntlm.log</string>
     <key>StandardOutPath</key>
-    <string>/Users/hb55683/Library/Logs/cntlm.log</string>
+    <string>/Users/josephwinston/Library/Logs/cntlm.log</string>
   </dict>
 </plist>
 
