@@ -29,10 +29,3 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
-[url "https://"]
-        insteadOf = git://
-[http]
-	proxy = http://127.0.0.1:3128
-[https]
-	proxy = http://127.0.0.1:3128
-
