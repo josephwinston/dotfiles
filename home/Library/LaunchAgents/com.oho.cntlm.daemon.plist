@@ -9,7 +9,7 @@
       <string>/opt/local/sbin/cntlm</string>
       <string>-v</string>
       <string>-c</string>
-      <string>/Users/josephwinston/Tools/x86_64-apple-darwin15.2.0/etc/cntlm.conf</string>
+      <string>/Users/josephwinston/Tools/x86_64-apple-darwin15.3.0/etc/cntlm.conf</string>
     </array>
     <key>KeepAlive</key>
     <false/>
