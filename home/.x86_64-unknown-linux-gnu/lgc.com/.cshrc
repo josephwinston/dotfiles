@@ -15,6 +15,6 @@ set path = (/opt/local/bin $path)
 #setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_60`
 setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_66`
 set path = (${JAVA_HOME}/bin $path)
-set path = (/opt/gradle-2.1/bin $path)
+set path = (/opt/gradle-2.10/bin $path)
 set path = (/opt/apache-maven-3.3.3/bin $path)
 
