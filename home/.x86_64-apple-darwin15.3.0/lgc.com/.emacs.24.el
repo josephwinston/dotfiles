@@ -110,20 +110,11 @@
 (autoload 'cmake-mode "~/Tools/share/emacs/site-lisp/cmake-mode.el" t)
 
 ;;
-;; scala XXX removed since not included in homeshick
+;; https://github.com/hvesalai/scala-mode2.git
 ;;
 
-;; (add-to-list 'load-path "~/Tools/share/emacs/site-lisp/scala")
-;; (require 'scala-mode-auto)
-
-;; (defun scala-turnoff-indent-tabs-mode ()
-;;   (setq indent-tabs-mode nil))
-
-;;
-;; scala mode hooks
-;;
-
-(add-hook 'scala-mode-hook 'scala-turnoff-indent-tabs-mode)
+(add-to-list 'load-path "~/Tools/share/emacs/site-lisp/scala-mode2/")
+(require 'scala-mode2)
 
 ;;
 ;; csharp
