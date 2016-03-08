@@ -44,10 +44,17 @@ total()
 # alias use_xcode6 "sudo xcode-select -switch /Applications/Xcode-Beta.app/Contents/Developer"
 # alias swift "xcrun swift"
 
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+
+if [ -f ${HOME}/Tools/share/bash/bash_completion ]; then
+    . ${HOME}/Tools/share/bash/bash_completion
+fi
+
 #
 # Git completion
 #
-
 
 if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ]; then
     . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash

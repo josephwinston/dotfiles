@@ -162,14 +162,6 @@ if [ "$FULLNAME" ]; then
     fi
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-
-if [ -f ${HOME}/Tools/share/bash/bash_completion ]; then
-    . ${HOME}/Tools/share/bash/bash_completion
-fi
-
 # set the prompt
 
 # cd
