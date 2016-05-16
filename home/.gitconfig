@@ -29,12 +29,6 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
-[url "https://"]
-        insteadOf = git://
-[https]
-        proxy = https://127.0.0.1:3128
-[http]
-        proxy = http://127.0.0.1:3128
 [push]
         default = simple
 [mergetool "p4merge"]
