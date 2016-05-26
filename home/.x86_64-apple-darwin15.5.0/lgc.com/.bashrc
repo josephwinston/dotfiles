@@ -64,6 +64,10 @@ fi
 # Docker
 #
 
+if [ -f /opt/local/share/bash-completion/completions/docker ]; then
+    . /opt/local/share/bash-completion/completions/docker
+fi
+
 if [ -f /opt/local/share/bash-completion/completions/docker-machine.bash ]; then
     . /opt/local/share/bash-completion/completions/docker-machine.bash
 fi

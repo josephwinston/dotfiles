@@ -21,7 +21,7 @@ if ( ! ($?iterm2_shell_integration_installed)) then
       alias _iterm2_end_prompt 'printf "\007"'
 
       # Define aliases for printing the current hostname
-      alias _iterm2_print_remote_host 'printf "1337;RemoteHost=$USER@$iterm2_hostname"'
+      alias _iterm2_print_remote_host 'printf "1337;RemoteHost=%s@%s" "$USER" "$iterm2_hostname"'
       alias _iterm2_remote_host "(_iterm2_start; _iterm2_print_remote_host; _iterm2_end)"
 
       # Define aliases for printing the current directory
@@ -29,12 +29,12 @@ if ( ! ($?iterm2_shell_integration_installed)) then
       alias _iterm2_current_dir "(_iterm2_start; _iterm2_print_current_dir; _iterm2_end)"
 
       # Define aliases for printing the shell integration version this script is written against
-      alias _iterm2_print_shell_integration_version 'printf "1337;ShellIntegrationVersion=1"'
+      alias _iterm2_print_shell_integration_version 'printf "1337;ShellIntegrationVersion=2;shell=tcsh"'
       alias _iterm2_shell_integration_version "(_iterm2_start; _iterm2_print_shell_integration_version; _iterm2_end)"
 
       # Define aliases for defining the boundary between a command prompt and the
       # output of a command started from that prompt.
-      alias _iterm2_print_between_prompt_and_exec 'printf "133;C;\r"'
+      alias _iterm2_print_between_prompt_and_exec 'printf "133;C;"'
       alias _iterm2_between_prompt_and_exec "(_iterm2_start; _iterm2_print_between_prompt_and_exec; _iterm2_end)"
 
       # Define aliases for defining the start of a command prompt.
@@ -53,7 +53,7 @@ if ( ! ($?iterm2_shell_integration_installed)) then
 
       # User may override this to set user-defined vars. It should look like this, because your shell is terrible for scripting:
       # alias _iterm2_user_defined_vars (iterm2_set_user_var key1 `printf "%s" value1 | base64`; iterm2_set_user_var key2 `printf "%s" value2 | base64`; ...)
-      alias _iterm2_user_defined_vars ''
+      (which _iterm2_user_defined_vars >& /dev/null) || alias _iterm2_user_defined_vars ''
 
       # Combines all status update aliases
       alias _iterm2_update_current_state '_iterm2_remote_host; _iterm2_current_dir; _iterm2_user_defined_vars'
