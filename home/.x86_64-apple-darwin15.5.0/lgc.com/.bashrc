@@ -44,6 +44,15 @@ total()
 # alias use_xcode6 "sudo xcode-select -switch /Applications/Xcode-Beta.app/Contents/Developer"
 # alias swift "xcrun swift"
 
+#
+# Macports
+#
+
+# bash-completion
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -100,3 +109,4 @@ if [ -e $HOME/.iterm2_shell_integration.bash ]; then
     . $HOME/.iterm2_shell_integration.bash
 fi
 
+    

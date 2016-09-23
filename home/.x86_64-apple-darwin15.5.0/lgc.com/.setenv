@@ -211,3 +211,11 @@ setenv SVN /usr/bin/svn
 
 setenv HADOOP_PREFIX ~/src/Tools/HADOOP/hadoop-2.6.0
 setenv HADOOP_HOME ~/src/Tools/HADOOP/hadoop-2.6.0
+
+#
+# GO
+#
+
+setenv GOPATH ~/personal/josephwinston/work/go
+
+
