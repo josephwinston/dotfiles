@@ -25,8 +25,3 @@ set path = ($path /opt/local/libexec/qt4/bin)
 
 set path = ($path ~/node_modules/.bin)
 
-#
-# Ruby
-#
-
-# set path = ($path ~/.gem/ruby/2.0.0/bin)

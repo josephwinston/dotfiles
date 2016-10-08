@@ -137,3 +137,4 @@ if ( -e ~/.$FULLNAME/$DOMAIN/.startup ) then
   source ~/.$FULLNAME/$DOMAIN/.startup
   # echo done source ~/.$FULLNAME/$DOMAIN/.startup
 endif
+
