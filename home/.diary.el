@@ -6,7 +6,7 @@
 ;;
 
 %%(diary-sunrise-sunset)
-%%(diary-phases-of-moon)
+;; %%(diary-phases-of-moon)
 ;; %%(diary-day-of-year)
 
 ;; #include "texas"

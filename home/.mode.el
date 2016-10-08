@@ -280,7 +280,7 @@
                '("\\.bashrc" . ksh-mode)
                '("\\..*profile" . ksh-mode))))
 
-(if (and (not running-emacs23) (not running-emacs24))
+(if (and (not running-emacs23) (not running-emacs24) (not running-emacs25) )
     (progn
       (setq ksh-mode-hook
 	    (function (lambda ()
@@ -311,6 +311,7 @@
 	 (not running-emacs22) 
 	 (not running-emacs23)
 	 (not running-emacs24)
+	 (not running-emacs25)
 	 )
     (load "dbx"))
 
@@ -324,7 +325,7 @@
       (setq hide-ifdef-read-only t)
       ))
 
-(if (and (not running-demacs) (not running-emacs23) (not running-emacs24))
+(if (and (not running-demacs) (not running-emacs23) (not running-emacs24) (not running-emacs25))
     (setq debugger 'edebug-debug))
 
 ;;

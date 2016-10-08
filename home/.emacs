@@ -10,6 +10,13 @@
 ;; Emacs
 ;;
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (defvar running-emacs18 nil)
 (defvar running-emacs19 nil)
 (defvar running-emacs20 nil)
@@ -17,6 +24,7 @@
 (defvar running-emacs22 nil)
 (defvar running-emacs23 nil)
 (defvar running-emacs24 nil)
+(defvar running-emacs25 nil)
 
 (defvar running-pearl nil)
 (defvar running-epoch nil)
@@ -51,6 +59,9 @@
 
 (if (string-match "^24\\." emacs-version)
     (setq running-emacs24 t))
+
+(if (string-match "^25\\." emacs-version)
+    (setq running-emacs25 t))
 
 (if (string-match "XEmacs" emacs-version)
     (setq running-emacs21 nil))
@@ -149,6 +160,9 @@
 
 (if running-emacs24
     (load "~/.emacs.24"))
+
+(if running-emacs25
+    (load "~/.emacs.25"))
 
 (if running-xemacs20
     (load "~/.xemacs.20"))
