@@ -73,7 +73,11 @@ setenv EDITOR /Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient
 # Bash 
 #
 
-setenv BASH_HOME /bin/bash
+if ( -e "/opt/local/bin/bash" ) then
+  setenv BASH_HOME /opt/local/bin/bash
+else
+  setenv BASH_HOME /bin/bash
+endif
 
 #
 # Macports
