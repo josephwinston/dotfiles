@@ -48,8 +48,8 @@ total()
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 
-if [ -f ${HOME}/Tools/share/bash/bash_completion ]; then
-    . ${HOME}/Tools/share/bash/bash_completion
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
 fi
 
 #
