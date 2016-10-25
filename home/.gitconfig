@@ -1,5 +1,6 @@
 [core]
 	whitespace = nowarn
+	quotepath = false
 [user]
 	name = Jody Winston
 	email = joseph.winston@halliburton.com
