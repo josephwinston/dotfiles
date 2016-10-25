@@ -77,10 +77,6 @@ if [ -f /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-comp
 fi
 
 #
-# See http://blog.sequenceiq.com/blog/2014/07/05/docker-debug-with-nsenter-on-boot2docker/
-#
-
-#
 # add homeshick
 #
 
