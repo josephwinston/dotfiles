@@ -192,7 +192,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(display-time-mode t)
- '(safe-local-variable-values (quote ((TeX-master quote (quote main)) (TeX-master . t) (TeX-master \` (\` main)) (TeX-master . "./main") (TeX-master . bible\.tex) (py-indent-offset . 2) (TeX-master . "main"))))
+ '(package-selected-packages (quote (markdown-mode python-mode cmake-mode csharp-mode)))
+ '(safe-local-variable-values
+   (quote
+    ((TeX-master quote
+		 (quote main))
+     (TeX-master . t)
+     (TeX-master \`
+		 (\` main))
+     (TeX-master . "./main")
+     (TeX-master . bible\.tex)
+     (py-indent-offset . 2)
+     (TeX-master . "main"))))
  '(save-place t nil (saveplace))
  '(tool-bar-mode nil))
 
