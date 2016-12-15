@@ -83,11 +83,11 @@ endif
 # Macports
 #
 
-if ($?DYLD_FALLBACK_LIBRARY_PATH == 0) then
-   setenv DYLD_FALLBACK_LIBRARY_PATH /opt/local/lib
-else
-   setenv DYLD_FALLBACK_LIBRARY_PATH /opt/local/lib:${DYLD_FALLBACK_LIBRARY_PATH}
-endif
+# if ($?DYLD_FALLBACK_LIBRARY_PATH == 0) then
+#    setenv DYLD_FALLBACK_LIBRARY_PATH /opt/local/lib
+# else
+#    setenv DYLD_FALLBACK_LIBRARY_PATH /opt/local/lib:${DYLD_FALLBACK_LIBRARY_PATH}
+# endif
 
 #
 # numba
