@@ -14,3 +14,4 @@ endif
 source ~/.setenv
 # echo done source ~/.setenv
 
+test -e "${HOME}/.iterm2_shell_integration.tcsh" && source "${HOME}/.iterm2_shell_integration.tcsh"
