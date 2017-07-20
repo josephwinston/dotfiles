@@ -192,7 +192,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(display-time-mode t)
- '(package-selected-packages (quote (markdown-mode python-mode cmake-mode csharp-mode)))
+ '(package-selected-packages
+   (quote
+    (company-irony company markdown-mode python-mode cmake-mode csharp-mode)))
  '(safe-local-variable-values
    (quote
     ((TeX-master quote
