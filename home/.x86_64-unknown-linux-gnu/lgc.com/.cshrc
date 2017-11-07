@@ -13,3 +13,6 @@ set path = (${JAVA_HOME}/bin $path)
 #set path = (/opt/gradle-2.10/bin $path)
 #set path = (/opt/apache-maven-3.3.3/bin $path)
 
+setenv GOPATH `echo ~/src/go`
+set path = (/usr/lib/go-1.9/bin $path)
+

@@ -26,30 +26,32 @@ setenv TCAT lpr
 
 setenv PAGER more
 
-#
-# X11 is here
-#
+if ($?XDG_SESSION_TYPE == 0) then
+  #
+  # X11 is here
+  #
 
-setenv X11HOME /usr/X11R6
+  setenv X11HOME /usr/X11R6
 
-# Where the application defaults are
-# This will work for R2-R5
-# When searching for the resource files, the bindings to XtFindFile are
-# ALWAYS:
-#  %T -> "app-defaults"
-#  %N -> <application class name>
-#  %S -> ""
-#
-# blank is /usr/lib/X11/app-defaults
-#
-
-setenv XAPPLRESDIR ~/.app-defaults
-
-setenv XFILESEARCHPATH `echo ~/.%T/%N%S`
-setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%S
-setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%C
-
-setenv XUSERFILESEARCHPATH `echo ~/.desktop-$HOSTNAME/%N`
+  # Where the application defaults are
+  # This will work for R2-R5
+  # When searching for the resource files, the bindings to XtFindFile are
+  # ALWAYS:
+  #  %T -> "app-defaults"
+  #  %N -> <application class name>
+  #  %S -> ""
+  #
+  # blank is /usr/lib/X11/app-defaults
+  #
+  
+  setenv XAPPLRESDIR ~/.app-defaults
+  
+  setenv XFILESEARCHPATH `echo ~/.%T/%N%S`
+  setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%S
+  setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%C
+  
+  setenv XUSERFILESEARCHPATH `echo ~/.desktop-$HOSTNAME/%N`
+endif
 
 #
 # What editor

@@ -73,12 +73,14 @@ setenv AUTHORCOPY ~/News/outgoing
 setenv MACH `echo $FULLNAME |cut -f1 -d"-"`
 
 #
-# Only set if not done
+# Only set if not done and not running Wayland
 #
 
 if ($?DISPLAY == 0) then
-#  setenv DISPLAY `echo "$HOSTNAME":0.0`
-  setenv DISPLAY :0.0
+  #  setenv DISPLAY `echo "$HOSTNAME":0.0`
+  if ($?XDG_SESSION_TYPE == 0) then
+    setenv DISPLAY :0.0
+  endif
 endif
 
 #
