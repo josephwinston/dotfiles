@@ -67,3 +67,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+[[ -s "/home/josephwinston/.gvm/scripts/gvm" ]] && source "/home/josephwinston/.gvm/scripts/gvm"
+
+if [ -s "/home/josephwinston/.gvm/scripts/gvm" ]; then
+    gvm use system > /dev/null 2>&1 
+fi
+
+
+

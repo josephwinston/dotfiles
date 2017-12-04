@@ -14,3 +14,4 @@ if (($SHELL != "bash") && (-e $BASH_HOME)) then
     exec $BASH_HOME
   endif
 endif
+

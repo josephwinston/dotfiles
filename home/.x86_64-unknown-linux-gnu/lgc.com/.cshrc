@@ -10,9 +10,18 @@ endif
 
 setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_131`
 set path = (${JAVA_HOME}/bin $path)
+setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-172.4343.14`
+set path = (${INTELLIJ_HOME}/bin $path)
+
 #set path = (/opt/gradle-2.10/bin $path)
 #set path = (/opt/apache-maven-3.3.3/bin $path)
 
+#
+# If you are using gvm, GOPATH might/will change
+#
+
 setenv GOPATH `echo ~/src/go`
 set path = (/usr/lib/go-1.9/bin $path)
+set path = (${GOPATH}/bin $path)
+
 
