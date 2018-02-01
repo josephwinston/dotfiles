@@ -138,3 +138,12 @@ if ( -e ~/.$FULLNAME/$DOMAIN/.startup ) then
   # echo done source ~/.$FULLNAME/$DOMAIN/.startup
 endif
 
+
+##
+# Your previous /Users/josephwinston/.cshrc file was backed up as /Users/josephwinston/.cshrc.macports-saved_2017-11-04_at_11:09:11
+##
+
+# MacPorts Installer addition on 2017-11-04_at_11:09:11: adding an appropriate PATH variable for use with MacPorts.
+setenv PATH "/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
