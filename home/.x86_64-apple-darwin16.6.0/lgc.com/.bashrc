@@ -44,6 +44,24 @@ total()
 # alias use_xcode6 "sudo xcode-select -switch /Applications/Xcode-Beta.app/Contents/Developer"
 # alias swift "xcrun swift"
 
+#
+# Spit out the drive given the name of the volume, eg eject /Volume/JBW
+#
+
+eject()
+{
+   diskutil unmount `df|grep "$1"`
+}
+
+#
+# Don't kick in the discrete GPU
+#
+
+chrome()
+{
+    open '/Applications/Google Chrome.app' --args --force_integrated_gpu
+}
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
