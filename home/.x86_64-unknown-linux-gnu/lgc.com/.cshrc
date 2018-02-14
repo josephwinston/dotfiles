@@ -10,7 +10,7 @@ endif
 
 setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_151`
 set path = (${JAVA_HOME}/bin $path)
-setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-173.3942.27`
+setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-173.4548.28`
 set path = (${INTELLIJ_HOME}/bin $path)
 
 #set path = (/opt/gradle-2.10/bin $path)
