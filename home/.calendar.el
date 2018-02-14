@@ -42,6 +42,7 @@
 
 ;; What days to show in diary
 ;; Show the next 7 days every day
+;; Not working in emacs 25
 
 (setq number-of-diary-entries [7 7 7 7 7 7 7])
 

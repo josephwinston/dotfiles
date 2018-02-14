@@ -332,7 +332,9 @@
 ;; python
 ;;
 
-(if (not running-emacs23)
+(if (and (not running-emacs23)
+	 (not running-emacs25)
+	 )
     (progn
       (autoload 'python-mode "python-mode" "Python editing mode." t)
       (setq auto-mode-alist

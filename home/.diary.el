@@ -6,8 +6,21 @@
 ;;
 
 %%(diary-sunrise-sunset)
-;; %%(diary-phases-of-moon)
-;; %%(diary-day-of-year)
+
+(if (or (running-emacs19) 
+	(running-emacs20) 
+	(running-emacs21) 
+	(running-emacs22) 
+	(running-emacs23)
+	(running-emacs24)
+	(running-emacs25)
+	)
+    (%%(diary-phases-of-moon))
+
+(if running-emacs25
+    (%%(diary-lunar-phases))
+  
+%%(diary-day-of-year)
 
 ;; #include "texas"
 

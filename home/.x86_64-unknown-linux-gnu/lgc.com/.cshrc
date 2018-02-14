@@ -8,9 +8,9 @@ endif
 # set path = (/home/hb55683/anaconda/bin $path)
 # set path = (/opt/local/bin $path)
 
-setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_131`
+setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_151`
 set path = (${JAVA_HOME}/bin $path)
-setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-172.4343.14`
+setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-173.4548.28`
 set path = (${INTELLIJ_HOME}/bin $path)
 
 #set path = (/opt/gradle-2.10/bin $path)
