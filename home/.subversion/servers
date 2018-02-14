@@ -157,4 +157,7 @@
 # store-ssl-client-cert-pp = no
 # store-ssl-client-cert-pp-plaintext = no
 
+http-proxy-host = localhost
+http-proxy-port = 3128
+
 
