@@ -24,4 +24,10 @@ setenv GOPATH `echo ~/src/go`
 set path = (/usr/lib/go-1.9/bin $path)
 set path = (${GOPATH}/bin $path)
 
+#
+# npm
+#
+
+set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
+
 
