@@ -30,4 +30,8 @@ set path = (${GOPATH}/bin $path)
 
 set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
 
+#
+# Zotero
+#
 
+set path = (~/Tools/x86_64-unknown-linux-gnu/Zotero_linux-x86_64 $path)
