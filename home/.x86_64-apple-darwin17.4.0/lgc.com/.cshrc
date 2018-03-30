@@ -17,11 +17,11 @@ set path = ($path /usr/texbin)
 
 set path = (/opt/local/bin $path)
 set path = (/opt/local/sbin $path)
-set path = ($path /opt/local/libexec/qt4/bin)
+# set path = ($path /opt/local/libexec/qt4/bin)
 
 #
 # npm
 #
 
-set path = ($path ~/node_modules/.bin)
-
+# set path = ($path ~/node_modules/.bin)
+set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
