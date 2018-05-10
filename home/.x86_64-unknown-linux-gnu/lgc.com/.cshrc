@@ -10,7 +10,7 @@ endif
 
 setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_161`
 set path = (${JAVA_HOME}/bin $path)
-setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-173.4548.28`
+setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-181.4445.78/bin`
 set path = (${INTELLIJ_HOME}/bin $path)
 
 #set path = (/opt/gradle-2.10/bin $path)
@@ -35,3 +35,11 @@ set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
 #
 
 set path = (~/Tools/x86_64-unknown-linux-gnu/Zotero_linux-x86_64 $path)
+
+#
+# IPFS
+#
+
+if ( -e /opt/go-ipfs_v0.4.14/ipfs )
+    set path = (/opt/go-ipfs_v0.4.14 $path)
+endif
