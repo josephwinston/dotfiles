@@ -43,3 +43,11 @@ set path = (~/Tools/x86_64-unknown-linux-gnu/Zotero_linux-x86_64 $path)
 if ( -e /opt/go-ipfs_v0.4.14/ipfs ) then
     set path = (/opt/go-ipfs_v0.4.14 $path)
 endif
+
+#
+# Rust
+#
+
+if ( -e $HOME/.cargo/bin ) then
+    set path = ($HOME/.cargo/bin $path)
+endif
