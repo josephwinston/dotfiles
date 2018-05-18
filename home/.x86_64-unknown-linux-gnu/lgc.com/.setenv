@@ -82,4 +82,11 @@ setenv ARTIFACT_PASS install@now
 # Ceylon
 #
 
-setenv CEYLON_HOME /usr/share/ceylon/1.2.0
+# setenv CEYLON_HOME /usr/share/ceylon/1.2.0
+
+#
+# Rust
+#
+
+setenv ROCKSDB_LIB_DIR /usr/lib/x86_64-linux-gnu
+setenv SNAPPY_LIB_DIR /usr/lib/x86_64-linux-gnu
