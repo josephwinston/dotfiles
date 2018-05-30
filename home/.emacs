@@ -34,6 +34,7 @@
 (defvar running-emacs23 nil)
 (defvar running-emacs24 nil)
 (defvar running-emacs25 nil)
+(defvar running-emacs26 nil)
 
 (defvar running-pearl nil)
 (defvar running-epoch nil)
@@ -70,6 +71,9 @@
     (setq running-emacs24 t))
 
 (if (string-match "^25\\." emacs-version)
+    (setq running-emacs25 t))
+
+(if (string-match "^26\\." emacs-version)
     (setq running-emacs25 t))
 
 (if (string-match "XEmacs" emacs-version)
@@ -172,6 +176,9 @@
 
 (if running-emacs25
     (load "~/.emacs.25"))
+
+(if running-emacs25
+    (load "~/.emacs.26"))
 
 (if running-xemacs20
     (load "~/.xemacs.20"))
