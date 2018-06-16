@@ -74,7 +74,7 @@
     (setq running-emacs25 t))
 
 (if (string-match "^26\\." emacs-version)
-    (setq running-emacs25 t))
+    (setq running-emacs26 t))
 
 (if (string-match "XEmacs" emacs-version)
     (setq running-emacs21 nil))
@@ -177,7 +177,7 @@
 (if running-emacs25
     (load "~/.emacs.25"))
 
-(if running-emacs25
+(if running-emacs26
     (load "~/.emacs.26"))
 
 (if running-xemacs20

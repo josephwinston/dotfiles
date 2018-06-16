@@ -325,7 +325,7 @@
 ;; Domain specific xemacs 21
 ;;
 
-(load "~/.$FULLNAME/$DOMAIN/.emacs.25" t)
+(load "~/.$FULLNAME/$DOMAIN/.emacs.26" t)
 
 ;;
 ;; start the server

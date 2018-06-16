@@ -280,7 +280,12 @@
                '("\\.bashrc" . ksh-mode)
                '("\\..*profile" . ksh-mode))))
 
-(if (and (not running-emacs23) (not running-emacs24) (not running-emacs25) )
+(if (and
+     (not running-emacs23)
+     (not running-emacs24)
+     (not running-emacs25)
+     (not running-emacs26)
+     )
     (progn
       (setq ksh-mode-hook
 	    (function (lambda ()
@@ -312,6 +317,7 @@
 	 (not running-emacs23)
 	 (not running-emacs24)
 	 (not running-emacs25)
+	 (not running-emacs26)
 	 )
     (load "dbx"))
 
@@ -325,7 +331,13 @@
       (setq hide-ifdef-read-only t)
       ))
 
-(if (and (not running-demacs) (not running-emacs23) (not running-emacs24) (not running-emacs25))
+(if (and
+     (not running-demacs)
+     (not running-emacs23)
+     (not running-emacs24)
+     (not running-emacs25)
+     (not running-emacs26)
+     )
     (setq debugger 'edebug-debug))
 
 ;;
@@ -333,7 +345,9 @@
 ;;
 
 (if (and (not running-emacs23)
+	 (not running-emacs24)
 	 (not running-emacs25)
+	 (not running-emacs26)
 	 )
     (progn
       (autoload 'python-mode "python-mode" "Python editing mode." t)
