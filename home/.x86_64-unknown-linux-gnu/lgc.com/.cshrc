@@ -60,6 +60,6 @@ endif
 # snap
 #
 
-if ( -e /snap/bin ); then
+if ( -e /snap/bin ) then
     set path = (/snap/bin $PATH)
 endif
