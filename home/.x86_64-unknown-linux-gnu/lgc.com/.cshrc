@@ -55,3 +55,11 @@ endif
 if ( -e $HOME/.cargo/bin ) then
     set path = ($HOME/.cargo/bin $path)
 endif
+
+#
+# snap
+#
+
+if ( -e /snap/bin ); then
+    set path = (/snap/bin $PATH)
+endif
