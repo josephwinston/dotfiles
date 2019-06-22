@@ -137,6 +137,7 @@ iterm_window () { set_iterm_name 2 $@; }
 # Conda's new way of integration
 #
 
-#if [ -e ${HOME}/anaconda3/etc/profile.d/conda.sh ]; then
-#    . ${HOME}/anaconda3/etc/profile.d/conda.sh
-#fi
+if [ -e ${HOME}/anaconda3/etc/profile.d/conda.sh ]; then
+    . ${HOME}/anaconda3/etc/profile.d/conda.sh
+fi
+
