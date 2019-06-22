@@ -113,8 +113,8 @@
 ;; https://github.com/hvesalai/scala-mode2.git
 ;;
 
-(add-to-list 'load-path "~/Tools/share/emacs/site-lisp/scala-mode2/")
-(require 'scala-mode2)
+;; (add-to-list 'load-path "~/Tools/share/emacs/site-lisp/scala-mode2/")
+;; (require 'scala-mode2)
 
 ;;
 ;; csharp
