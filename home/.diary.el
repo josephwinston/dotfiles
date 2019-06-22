@@ -55,6 +55,14 @@
 2/21 Neal Immega's Birthday
 &%%(diary-anniversary 4 2 2005) Scott's %d%s Death at 12:30 CST
 
+;;; Grandchildren
+
+&%%(diary-anniversary 1 14 2015) Seren Winston %d%s Birthday
+&%%(diary-anniversary 8 17 2017) Auroa Kalan Winston %d%s Birthday
+&%%(diary-anniversary 1 14 2019) Brienne Danielle Winston %d%s Birthday
+
+&%%(diary-anniversary 4 22 2019) Isabel Mariana Winston %d%s Birthday
+
 ;; HAL's Movie birthday
 
 &%%(diary-anniversary 01 12 1992) HAL's %d%s Birthday
