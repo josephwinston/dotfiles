@@ -90,3 +90,9 @@ setenv ARTIFACT_PASS install@now
 
 setenv ROCKSDB_LIB_DIR /usr/lib/x86_64-linux-gnu
 setenv SNAPPY_LIB_DIR /usr/lib/x86_64-linux-gnu
+
+#
+# Hadoop
+#
+
+setenv HADOOP_HOME `echo ~/work/DistributedArchitecture/hadoop-3.1.1`

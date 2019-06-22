@@ -346,13 +346,18 @@
 
 (if (and (not running-emacs23)
 	 (not running-emacs24)
-	 (not running-emacs25)
-	 (not running-emacs26)
 	 )
     (progn
       (autoload 'python-mode "python-mode" "Python editing mode." t)
       (setq auto-mode-alist
 	    (cons '("\\.py$" . python-mode) auto-mode-alist))
+      ))
+
+(if (and (not running-emacs25)
+	 (not running-emacs26)
+	 )
+    (progn
+      (require 'python)      
       ))
 
 ;;

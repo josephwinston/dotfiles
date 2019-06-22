@@ -74,5 +74,6 @@ if [ -s "/home/josephwinston/.gvm/scripts/gvm" ]; then
     gvm use system > /dev/null 2>&1 
 fi
 
-
-
+if [ -e /home/josephwinston/anaconda3/etc/profile.d/conda.sh ]; then
+    source /home/josephwinston/anaconda3/etc/profile.d/conda.sh
+fi

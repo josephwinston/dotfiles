@@ -10,8 +10,12 @@ endif
 
 setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_161`
 set path = (${JAVA_HOME}/bin $path)
-setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-181.5540.7/bin`
+
+setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-182.4505.22`
 set path = (${INTELLIJ_HOME}/bin $path)
+
+setenv WEBSTORM_HOME `echo ~/Tools/${FULLNAME}/WebStorm-182.4505.50`
+set path = (${WEBSTORM_HOME}/bin $path)
 
 #set path = (/opt/gradle-2.10/bin $path)
 #set path = (/opt/apache-maven-3.3.3/bin $path)
@@ -50,4 +54,12 @@ endif
 
 if ( -e $HOME/.cargo/bin ) then
     set path = ($HOME/.cargo/bin $path)
+endif
+
+#
+# snap
+#
+
+if ( -e /snap/bin ) then
+    set path = (/snap/bin $PATH)
 endif
