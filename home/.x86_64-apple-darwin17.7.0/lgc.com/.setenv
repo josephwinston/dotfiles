@@ -5,6 +5,13 @@
 #
 
 #
+# https://blogs.agilefaqs.com/2014/01/12/fixing-perl-warning-setting-locale-failed-on-mac-osx/
+#
+
+setenv LC_CTYPE en_US.UTF-8
+setenv LC_ALL en_US.UTF-8
+
+#
 # What time zone
 #
 
@@ -229,3 +236,11 @@ set path = ($path ${GOPATH}/bin)
 
 setenv BROWSER open
 
+#
+# Mac users may need to set the environment variable
+# "HDF5_USE_FILE_LOCKING" to the five-character string "FALSE" when
+# accessing network mounted files.  This is an application run-time
+# setting, not a configure or build setting.  Otherwise errors such
+# as "unable to open file" or "HDF5 error" may be encountered.
+
+setenv HDF5_USE_FILE_LOCKING FALSE
