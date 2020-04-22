@@ -163,11 +163,18 @@ setenv ETS_TOOLKIT qt4
 setenv GRADLE_HOME /opt/local/share/java/gradle
 
 #
+# OpenJDK via macports
+#
+
+# setenv JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk8/Contents/Home
+setenv JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk11-openj9/Contents/Home
+
+#
 # DSD 8.4 or newer
 #
 
 # setenv JAVA_HOME `/usr/libexec/java_home --version 1.7`
-setenv JAVA_HOME `/usr/libexec/java_home --version 1.8`
+# setenv JAVA_HOME `/usr/libexec/java_home --version 1.8`
 
 #
 # ECLIPSE
@@ -244,3 +251,12 @@ setenv BROWSER open
 # as "unable to open file" or "HDF5 error" may be encountered.
 
 setenv HDF5_USE_FILE_LOCKING FALSE
+
+#
+# elasticsearch
+#
+
+#setenv JAVA_HOME `/usr/libexec/java_home --version 1.8`
+#setenv ES_HOME ${HOME}/work/elasticsearch--6.7.0 # Note 7.6.1 fails!
+#set path = ($path ${ES_HOME}/bin)
+
