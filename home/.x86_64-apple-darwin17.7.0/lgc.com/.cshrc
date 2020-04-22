@@ -25,3 +25,5 @@ set path = (/opt/local/sbin $path)
 
 # set path = ($path ~/node_modules/.bin)
 set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
+set path = (${HOME}/.cargo/bin $path)
+
