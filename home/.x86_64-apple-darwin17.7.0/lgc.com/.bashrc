@@ -74,10 +74,16 @@ fi
 # Git completion
 #
 
-if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ]; then
-    . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+#if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ]; then
+#    . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+#fi
+
+
+if [ -f /opt/local/share/git/contrib/completion.bash ]; then
+    . /opt/local/share/git/contrib/completion.bash/git-completion.bash
 fi
-    
+
+
 #
 # Docker
 #
