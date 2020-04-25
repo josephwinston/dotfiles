@@ -139,11 +139,21 @@ iterm_both () { set_iterm_name 0 $@; }
 iterm_tab () { set_iterm_name 1 $@; }
 iterm_window () { set_iterm_name 2 $@; }
 
-#
-# Conda's new way of integration
-#
+# Stupid rust just like conda wants to mess with my files
+export PATH="$HOME/.cargo/bin:$PATH"
 
-if [ -e ${HOME}/anaconda3/etc/profile.d/conda.sh ]; then
-    . ${HOME}/anaconda3/etc/profile.d/conda.sh
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/josephwinston/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/josephwinston/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/josephwinston/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/josephwinston/opt/anaconda3/bin:$PATH"
+    fi
 fi
+unset __conda_setup
+# <<< conda initialize <<<
 
