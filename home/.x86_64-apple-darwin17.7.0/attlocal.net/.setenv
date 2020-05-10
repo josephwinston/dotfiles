@@ -109,46 +109,6 @@ endif
 setenv PYTHONSTARTUP  ~/.pythonrc.py
 
 #
-# Proxies
-#
-
-if ( -e "/usr/sbin/scselect" ) then
-  setenv LOCATION `/usr/sbin/scselect | perl -ne 'if (m/^\s+\*\s+(\S+)\s+\((.+)\)$/) { print "$2\n"; }'`
-endif
-
-switch (${LOCATION})
-  case "Home":
-    unsetenv http_proxy
-    unsetenv https_proxy
-    unsetenv ftp_proxy
-    unsetenv RSYNC_PROXY
-  breaksw
-  case "Halliburton":
-#    setenv http_proxy http://np1prxy801.corp.halliburton.com:80
-#    setenv https_proxy http://np1prxy801.corp.halliburton.com:80
-#    setenv ftp_proxy http://np1prxy801.corp.halliburton.com:80
-#    setenv RSYNC_PROXY np1prxy801.corp.halliburton.com:80
-    setenv http_proxy http://127.0.0.1:3128
-    setenv https_proxy http://127.0.0.1:3128
-    setenv ftp_proxy http://127.0.0.1:3128
-    setenv RSYNC_PROXY 127.0.0.1:3128
-    setenv no_proxy "localhost, *.lgc.com, *.houston.lgc.com, *.corp.halliburton.com, *.dev, 127.0.0.*, 10.*, 192.168.*, .sock"
-  breaksw
-  case "Automatic":
-    unsetenv http_proxy
-    unsetenv https_proxy
-    unsetenv ftp_proxy
-    unsetenv RSYNC_PROXY
-  breaksw
-  default:
-    unsetenv http_proxy
-    unsetenv https_proxy
-    unsetenv ftp_proxy
-    unsetenv RSYNC_PROXY
-  breaksw
-endsw
-     
-#
 # pyface
 #
 
@@ -166,62 +126,11 @@ setenv GRADLE_HOME /opt/local/share/java/gradle
 # OpenJDK via macports
 #
 
-# setenv JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk8/Contents/Home
+setenv JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk8/Contents/Home
 # setenv JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk11-openj9/Contents/Home
-
-#
-# DSD 8.4 or newer
-#
 
 # setenv JAVA_HOME `/usr/libexec/java_home --version 1.7`
 # setenv JAVA_HOME `/usr/libexec/java_home --version 1.8`
-
-#
-# ECLIPSE
-#
-
-setenv ECLIPSE_HOME ${HOME}/.eclipse
-
-#
-# lgcbuild
-#
-
-setenv LGCBUILD ${HOME}/work/lgcbuild
-
-#
-# Turn on debugging (and we hope that everyone recognizes this flag)
-#
-
-setenv NATIVE_DEBUG true
-
-setenv ARTIFACT_USER meinstall
-setenv ARTIFACT_PASS install@now
-
-setenv OS_PLATFORM mac64
-setenv RELEASE_NAME DS_5000_8_1_0_MAC
-
-setenv SVN /usr/bin/svn
-# setenv SVN /opt/local/bin/svn
-
-#
-# Docker -- Not using with docker-machine
-#
-
-# setenv DOCKER_TLS_VERIFY 1
-# setenv DOCKER_HOST tcp://192.168.59.103:2376
-# setenv DOCKER_CERT_PATH /Users/hb55683/.boot2docker/certs/boot2docker-vm
-
-#
-# OpenWorks
-#
-
-# if ( -e ~/.$FULLNAME/$DOMAIN/.lgc ) then
-#  # echo "Not using ~/.$FULLNAME/$DOMAIN/.lgc"
-#  source ~/.$FULLNAME/$DOMAIN/.lgc
-#  # echo done source ~/.$FULLNAME/$DOMAIN/.lgc
-# else
-#  echo ~/.$FULLNAME/$DOMAIN/.lgc not found
-# endif
 
 #
 # hadoop
