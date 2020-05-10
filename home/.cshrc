@@ -140,4 +140,7 @@ endif
 
 setenv PATH "/opt/local/bin:/opt/local/sbin:$PATH"
 
+# MacPorts Installer addition on 2020-05-09_at_21:06:41: adding an appropriate PATH variable for use with MacPorts.
+setenv PATH "/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
 

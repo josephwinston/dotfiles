@@ -15,7 +15,6 @@
 # Get the domain name
 #
 
-setenv DOMAIN "lgc.com"
 # if { ~/Tools/bin/which -f domainname > /dev/null } then
 #   setenv DOMAIN `domainname`
 # else
@@ -38,8 +37,8 @@ setenv UNAME_VERSION `uname -v`
 # Hack for OS X
 #
 
-if ( $FULLNAME == "x86_64-apple-darwin10.8.0" ) then
-   setenv DOMAIN lgc.com
+if ( $FULLNAME == "x86_64-apple-darwin17.7.0" ) then
+   setenv DOMAIN attlocal.net
 endif
 
 #
