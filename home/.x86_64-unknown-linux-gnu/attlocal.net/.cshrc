@@ -11,11 +11,11 @@ endif
 setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_161`
 set path = (${JAVA_HOME}/bin $path)
 
-setenv INTELLIJ_HOME `echo ~/Tools/${FULLNAME}/idea-IC-182.4505.22`
-set path = (${INTELLIJ_HOME}/bin $path)
+setenv DATA_GRIP_HOME `echo ~/Tools/${FULLNAME}/DataGrip`
+set path = (${DATA_GRIP_HOME}/bin $path)
 
-setenv WEBSTORM_HOME `echo ~/Tools/${FULLNAME}/WebStorm-182.4505.50`
-set path = (${WEBSTORM_HOME}/bin $path)
+setenv ZOTERO_HOME `echo ~/Tools/${FULLNAME}/Zotero`
+set path = (${ZOTERO_HOME}/bin $path)
 
 #set path = (/opt/gradle-2.10/bin $path)
 #set path = (/opt/apache-maven-3.3.3/bin $path)
