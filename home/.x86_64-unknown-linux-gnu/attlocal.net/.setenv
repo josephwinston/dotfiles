@@ -1,0 +1,98 @@
+# /bin/csh -f
+
+if ($?LD_LIBRARY_PATH == 0) then
+  setenv LD_LIBRARY_PATH /usr/local/lib
+else
+  setenv LD_LIBRARY_PATH /usr/local/lib:${LD_LIBRARY_PATH}
+endif
+
+#
+# What time zone
+#
+
+setenv TZ CST6CDT
+
+#
+# To Print out man pages using man -t man_entry
+#
+
+# setenv TROFF ptroff
+setenv TROFF "groff -l"
+setenv TCAT lpr
+
+#
+# more not less
+#
+
+setenv PAGER more
+
+if ($?XDG_SESSION_TYPE == 0) then
+  #
+  # X11 is here
+  #
+
+  setenv X11HOME /usr/X11R6
+
+  # Where the application defaults are
+  # This will work for R2-R5
+  # When searching for the resource files, the bindings to XtFindFile are
+  # ALWAYS:
+  #  %T -> "app-defaults"
+  #  %N -> <application class name>
+  #  %S -> ""
+  #
+  # blank is /usr/lib/X11/app-defaults
+  #
+  
+  setenv XAPPLRESDIR ~/.app-defaults
+  
+  setenv XFILESEARCHPATH `echo ~/.%T/%N%S`
+  setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%S
+  setenv XFILESEARCHPATH ${XFILESEARCHPATH}:${X11HOME}/lib/X11/%T/%N%C
+  
+  setenv XUSERFILESEARCHPATH `echo ~/.desktop-$HOSTNAME/%N`
+endif
+
+#
+# What editor
+#
+
+setenv EDITOR emacsclient
+
+#
+# Set up BASH
+#
+
+setenv BASH_HOME /bin/bash
+
+#
+# PYTHON
+#
+
+setenv PYTHONSTARTUP ~/.pythonrc.py
+
+#
+# lgcbuild
+#
+
+setenv ARTIFACT_USER meinstall
+setenv ARTIFACT_PASS install@now
+
+#
+# Ceylon
+#
+
+# setenv CEYLON_HOME /usr/share/ceylon/1.2.0
+
+#
+# Rust
+#
+
+setenv ROCKSDB_LIB_DIR /usr/lib/x86_64-linux-gnu
+setenv SNAPPY_LIB_DIR /usr/lib/x86_64-linux-gnu
+
+#
+# Hadoop
+#
+
+setenv HADOOP_HOME `echo ~/work/DistributedArchitecture/hadoop-3.1.1`
