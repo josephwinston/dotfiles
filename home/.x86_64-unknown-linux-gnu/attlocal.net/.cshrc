@@ -1,4 +1,4 @@
-# /bin/csh -f
+<<# /bin/csh -f
 
 if ($?prompt != 0) then
    # Only set if interactive
@@ -21,12 +21,6 @@ set path = (${GOPATH}/bin $path)
 #
 
 # set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
-
-#
-# Zotero
-#
-
-# set path = (~/Tools/x86_64-unknown-linux-gnu/Zotero_linux-x86_64 $path)
 
 #
 # Rust
