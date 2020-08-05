@@ -105,3 +105,20 @@ export NVM_DIR="$HOME/.nvm"
 #
 
 [[ -s "/home/josephwinston/.gvm/scripts/gvm" ]] && source "/home/josephwinston/.gvm/scripts/gvm"
+
+#
+# Vulkan
+# __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only %command%
+#
+
+#
+# OpenGL
+# __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia nvidia-smi
+#
+
+#
+# Here is what prime_run uses
+#
+# __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia "$@"
+#
+
