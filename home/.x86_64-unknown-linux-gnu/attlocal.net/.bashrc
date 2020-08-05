@@ -43,13 +43,8 @@ fi
 alias open "xdg-open"
 
 #
-# aqt
+# aqt see source setQtVersion 
 #
-
-export PATH=/home/josephwinston/work/CMS/ThirdParty/qt/5.12.0/gcc_64/bin:$PATH
-export QT_PLUGIN_PATH=/home/josephwinston/work/CMS/ThirdParty/qt/5.12.0/gcc_64/plugins/
-export QML_IMPORT_PATH=/home/josephwinston/work/CMS/ThirdParty/qt/5.12.0/gcc_64/qml/
-export QML2_IMPORT_PATH=/home/josephwinston/work/CMS/ThirdParty/qt/5.12.0/gcc_64/qml/
 
 #
 # Homesick
