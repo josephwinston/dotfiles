@@ -8,14 +8,14 @@ endif
 # set path = (/home/hb55683/anaconda/bin $path)
 # set path = (/opt/local/bin $path)
 
-setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_161`
-set path = (${JAVA_HOME}/bin $path)
+# setenv JAVA_HOME `echo ~/Tools/${FULLNAME}/jdk1.8.0_161`
+# set path = (${JAVA_HOME}/bin $path)
 
-setenv DATA_GRIP_HOME `echo ~/Tools/${FULLNAME}/DataGrip`
-set path = (${DATA_GRIP_HOME}/bin $path)
-
-setenv ZOTERO_HOME `echo ~/Tools/${FULLNAME}/Zotero`
-set path = (${ZOTERO_HOME}/bin $path)
+# setenv DATA_GRIP_HOME `echo ~/Tools/${FULLNAME}/DataGrip`
+# set path = (${DATA_GRIP_HOME}/bin $path)
+ 
+# setenv ZOTERO_HOME `echo ~/Tools/${FULLNAME}/Zotero`
+# set path = (${ZOTERO_HOME}/bin $path)
 
 #set path = (/opt/gradle-2.10/bin $path)
 #set path = (/opt/apache-maven-3.3.3/bin $path)
@@ -35,18 +35,8 @@ set path = (${GOPATH}/bin $path)
 set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
 
 #
-# Zotero
-#
-
-set path = (~/Tools/x86_64-unknown-linux-gnu/Zotero_linux-x86_64 $path)
-
-#
 # IPFS
 #
-
-if ( -e /opt/go-ipfs_v0.4.14/ipfs ) then
-    set path = (/opt/go-ipfs_v0.4.14 $path)
-endif
 
 #
 # Rust
@@ -56,10 +46,3 @@ if ( -e $HOME/.cargo/bin ) then
     set path = ($HOME/.cargo/bin $path)
 endif
 
-#
-# snap
-#
-
-if ( -e /snap/bin ) then
-    set path = (/snap/bin $PATH)
-endif
