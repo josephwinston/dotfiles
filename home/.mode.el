@@ -285,6 +285,7 @@
      (not running-emacs24)
      (not running-emacs25)
      (not running-emacs26)
+     (not running-emacs27)
      )
     (progn
       (setq ksh-mode-hook
@@ -318,6 +319,7 @@
 	 (not running-emacs24)
 	 (not running-emacs25)
 	 (not running-emacs26)
+	 (not running-emacs27)
 	 )
     (load "dbx"))
 
@@ -337,6 +339,7 @@
      (not running-emacs24)
      (not running-emacs25)
      (not running-emacs26)
+     (not running-emacs27)
      )
     (setq debugger 'edebug-debug))
 
@@ -355,6 +358,7 @@
 
 (if (and (not running-emacs25)
 	 (not running-emacs26)
+	 (not running-emacs27)
 	 )
     (progn
       (require 'python)      

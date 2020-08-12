@@ -10,6 +10,6 @@
 
 if (($SHELL != "bash") && (-e $BASH_HOME)) then
     # use the full path in case the path hasn't been set
-     exec $BASH_HOME
+    exec $BASH_HOME
   endif
 endif

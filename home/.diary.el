@@ -63,6 +63,10 @@
 
 &%%(diary-anniversary 4 22 2019) Isabel Mariana Winston %d%s Birthday
 
+;;; Parents
+
+&%%(diary-anniversary 5 21 1938) Joe Winston, Jr. %d%s Birthday
+
 ;; HAL's Movie birthday
 
 &%%(diary-anniversary 01 12 1992) HAL's %d%s Birthday

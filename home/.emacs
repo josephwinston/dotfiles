@@ -35,6 +35,7 @@
 (defvar running-emacs24 nil)
 (defvar running-emacs25 nil)
 (defvar running-emacs26 nil)
+(defvar running-emacs27 nil)
 
 (defvar running-pearl nil)
 (defvar running-epoch nil)
@@ -75,6 +76,9 @@
 
 (if (string-match "^26\\." emacs-version)
     (setq running-emacs26 t))
+
+(if (string-match "^27\\." emacs-version)
+    (setq running-emacs27 t))
 
 (if (string-match "XEmacs" emacs-version)
     (setq running-emacs21 nil))
@@ -180,6 +184,9 @@
 (if running-emacs26
     (load "~/.emacs.26"))
 
+(if running-emacs27
+    (load "~/.emacs.27"))
+
 (if running-xemacs20
     (load "~/.xemacs.20"))
 
@@ -213,7 +220,11 @@
     (company-irony company markdown-mode python-mode cmake-mode csharp-mode)))
  '(safe-local-variable-values
    (quote
-    ((TeX-master quote
+    ((eval add-hook
+	   (quote before-save-hook)
+	   (function clang-format-buffer)
+	   nil t)
+     (TeX-master quote
 		 (quote main))
      (TeX-master . t)
      (TeX-master \`
