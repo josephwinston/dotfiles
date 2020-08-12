@@ -37,6 +37,11 @@ setenv UNAME_VERSION `uname -v`
 # Hack for OS X
 #
 
+if ( $FULLNAME == "x86_64-unknown-linux-gnu" ) then
+   setenv DOMAIN attlocal.net
+endif
+
+
 if ( $FULLNAME == "x86_64-apple-darwin17.7.0" ) then
    setenv DOMAIN attlocal.net
 endif
