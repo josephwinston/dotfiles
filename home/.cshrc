@@ -1,5 +1,7 @@
 # /bin/csh -f
 
+# echo "~/.cshrc"
+
 #
 # $Id: .cshrc,v 1.1 2000/09/05 00:13:27 CVS_jody Exp $
 #
@@ -137,10 +139,3 @@ if ( -e ~/.$FULLNAME/$DOMAIN/.startup ) then
   source ~/.$FULLNAME/$DOMAIN/.startup
   # echo done source ~/.$FULLNAME/$DOMAIN/.startup
 endif
-
-setenv PATH "/opt/local/bin:/opt/local/sbin:$PATH"
-
-# MacPorts Installer addition on 2020-05-09_at_21:06:41: adding an appropriate PATH variable for use with MacPorts.
-setenv PATH "/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
