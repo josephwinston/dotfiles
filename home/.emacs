@@ -210,7 +210,7 @@
  '(display-time-mode t)
  '(package-selected-packages
    (quote
-    (company-irony company markdown-mode python-mode cmake-mode csharp-mode)))
+    (cider ## company-irony company markdown-mode python-mode cmake-mode csharp-mode)))
  '(safe-local-variable-values
    (quote
     ((TeX-master quote
