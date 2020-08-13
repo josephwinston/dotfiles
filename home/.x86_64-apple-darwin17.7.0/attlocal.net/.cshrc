@@ -25,3 +25,6 @@ set path = (/opt/local/sbin $path)
 set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
 set path = (${HOME}/.cargo/bin $path)
 
+# https://github.com/conda/conda/issues/9392
+unsetenv CONDA_SHLVL
+

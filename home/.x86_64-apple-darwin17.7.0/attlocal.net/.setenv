@@ -169,3 +169,15 @@ setenv HDF5_USE_FILE_LOCKING FALSE
 #setenv ES_HOME ${HOME}/work/elasticsearch--6.7.0 # Note 7.6.1 fails!
 #set path = ($path ${ES_HOME}/bin)
 
+#
+# PKG_CONFIG_PATH
+#
+
+setenv PKG_CONFIG_PATH /usr/local/lib/pkgconfig
+
+#
+# see https://stackoverflow.com/a/55344565
+#
+
+setenv SDKROOT "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+

@@ -142,6 +142,16 @@ iterm_window () { set_iterm_name 2 $@; }
 # Stupid rust just like conda wants to mess with my files
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Stupid eb
+export PATH="/Users/josephwinston/.ebcli-virtual-env/executables:$PATH"
+
+# https://github.com/conda/conda/issues/9392
+unset CONDA_SHLVL
+
+# if [ -e /Users/josephwinston/opt/anaconda3/etc/profile.d/conda.sh ]; then
+#     source /Users/josephwinston/opt/anaconda3/etc/profile.d/conda.sh
+# fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/josephwinston/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -155,5 +165,5 @@ else
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
+# # # <<< conda initialize <<<
 

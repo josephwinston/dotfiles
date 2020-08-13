@@ -56,4 +56,4 @@
 ;; http://stackoverflow.com/questions/8132426/how-do-i-set-fonts-on-emacs-for-mac
 ;;
 
-(set-default-font "-apple-Monaco-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Monaco-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
