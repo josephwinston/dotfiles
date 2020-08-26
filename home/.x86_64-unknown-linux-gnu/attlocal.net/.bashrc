@@ -122,3 +122,12 @@ export NVM_DIR="$HOME/.nvm"
 # __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only __GLX_VENDOR_LIBRARY_NAME=nvidia "$@"
 #
 
+#
+# Using the compilers
+#
+
+# unsetenv LD_LIBRARY_PATH
+# source /opt/oecore-x86_64/environment-setup-armv7at2hf-neon-oe-linux-gnueabi
+# cmake -DMACHINE=cms-switch ..
+
+
