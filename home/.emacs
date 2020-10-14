@@ -216,23 +216,16 @@
  ;; If there is more than one, they won't work right.
  '(display-time-mode t)
  '(package-selected-packages
-   (quote
-    (cider ## company-irony company markdown-mode python-mode cmake-mode csharp-mode)))
+   '(cider ## company-irony company markdown-mode python-mode cmake-mode csharp-mode))
  '(safe-local-variable-values
-   (quote
-    ((eval add-hook
-	   (quote before-save-hook)
-	   (function clang-format-buffer)
-	   nil t)
-     (TeX-master quote
-		 (quote main))
+   '((eval add-hook 'before-save-hook #'clang-format-buffer nil t)
+     (TeX-master quote 'main)
      (TeX-master . t)
-     (TeX-master \`
-		 (\` main))
+     (TeX-master \` `main)
      (TeX-master . "./main")
      (TeX-master . bible\.tex)
      (py-indent-offset . 2)
-     (TeX-master . "main"))))
+     (TeX-master . "main")))
  '(save-place t nil (saveplace))
  '(tool-bar-mode nil))
 

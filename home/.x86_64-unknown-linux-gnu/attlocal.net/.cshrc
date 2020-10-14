@@ -5,22 +5,12 @@ if ($?prompt != 0) then
    stty erase "^?" 
 endif
 
-# set path = (/home/hb55683/anaconda/bin $path)
-# set path = (/opt/local/bin $path)
-
 #
 # If you are using gvm, GOPATH might/will change
 #
 
-setenv GOPATH `echo ~/src/go`
-# set path = (/usr/lib/go-1.9/bin $path)
-set path = (${GOPATH}/bin $path)
-
-#
-# npm
-#
-
-# set path = (${HOME}/Tools/${FULLNAME}/npm/bin $path)
+#setenv GOPATH `echo ~/src/go`
+#set path = (${GOPATH}/bin $path)
 
 #
 # Rust

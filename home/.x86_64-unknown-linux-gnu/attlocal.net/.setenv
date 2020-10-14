@@ -72,19 +72,6 @@ setenv BASH_HOME /bin/bash
 setenv PYTHONSTARTUP ~/.pythonrc.py
 
 #
-# lgcbuild
-#
-
-setenv ARTIFACT_USER meinstall
-setenv ARTIFACT_PASS install@now
-
-#
-# Ceylon
-#
-
-# setenv CEYLON_HOME /usr/share/ceylon/1.2.0
-
-#
 # Rust
 #
 
@@ -95,4 +82,10 @@ setenv SNAPPY_LIB_DIR /usr/lib/x86_64-linux-gnu
 # Hadoop
 #
 
-setenv HADOOP_HOME `echo ~/work/DistributedArchitecture/hadoop-3.1.1`
+# setenv HADOOP_HOME `echo ~/work/DistributedArchitecture/hadoop-3.1.1`
+
+#
+# JaX
+#
+
+setenv XLA_FLAGS --xla_gpu_cuda_data_dir=/opt/cuda
