@@ -26,6 +26,8 @@ total()
     END{printf("%d bytes in %d files\n", tot, num)}'
 }
 
+alias ShadowJacked 'npx shadow-cljs -d cider/cider-nrepl:0.23.0'
+
 alias ls "ls -C --color=auto"
 
 alias versions "rpm -q -a --queryformat '%{NAME} %{VERSION}\n'"
