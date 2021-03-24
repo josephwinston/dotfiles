@@ -2,6 +2,8 @@
 # $Id: //depot/Jody/main/jody/.i686-unknown-linux/xprtcc.com/.bashrc#3 $
 #
 
+# set enable-bracketed-paste off  # 5.1 Bash spew
+
 #
 # This is a little like `zap' from Kernighan and Pike
 #
@@ -26,7 +28,7 @@ total()
     END{printf("%d bytes in %d files\n", tot, num)}'
 }
 
-alias ShadowJacked 'npx shadow-cljs -d cider/cider-nrepl:0.23.0'
+alias ShadowJacked 'npx shadow-cljs -d cider/cider-nrepl:0.25.9'
 
 alias ls "ls -C --color=auto"
 
@@ -103,6 +105,8 @@ unset __conda_setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm use v12.19.0 > /dev/null 2>&1 
 
 #
 # Vulkan
