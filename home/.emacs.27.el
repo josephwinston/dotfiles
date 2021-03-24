@@ -11,8 +11,7 @@
 ;; You may delete these explanatory comments.
 ;;
 
-(package-initialize)
-
+;; (package-initialize)
 
 (defun jbw-startup()
   "Local startup code"

@@ -216,7 +216,7 @@
  ;; If there is more than one, they won't work right.
  '(display-time-mode t)
  '(package-selected-packages
-   '(cider ## company-irony company markdown-mode python-mode cmake-mode csharp-mode))
+   '(rainbow-delimiters cider ## company-irony company markdown-mode python-mode cmake-mode csharp-mode))
  '(safe-local-variable-values
    '((eval add-hook 'before-save-hook #'clang-format-buffer nil t)
      (TeX-master quote 'main)

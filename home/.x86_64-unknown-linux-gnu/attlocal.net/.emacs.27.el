@@ -38,4 +38,4 @@
 (package-initialize)
 
 
-
+(setq visible-bell t)
