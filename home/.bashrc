@@ -153,8 +153,8 @@ HISTORYCONTROL=ignoredups
 history_control=ignoredups
 command_oriented_history=1
 histappend=1
-HISTSIZE=5000
-HISTFILESIZE=50000
+HISTSIZE=50000
+HISTFILESIZE=500000
 
 if [ "$FULLNAME" ]; then
     if [ -f $HOME/.$FULLNAME/$DOMAIN/.bashrc ]; then
@@ -165,3 +165,4 @@ fi
 # set the prompt
 
 # cd
+source "$HOME/.cargo/env"
